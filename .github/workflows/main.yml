@@ -2,9 +2,8 @@ name: Laravel CI/CD (Namecheap SSH)
 
 on:
   push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
   deploy:
@@ -27,7 +26,13 @@ jobs:
       - name: Upload project via rsync (SSH)
         uses: burnett01/rsync-deployments@7.1.0
         with:
-          # switches: -avz --delete
+          switches: >
+            -az
+            --exclude=".env"
+            --exclude="storage/**"
+            --exclude="bootstrap/cache/**"
+            --exclude=".git"
+            --exclude=".htaccess"
           path: ./
           remote_path: ${{ secrets.APP_PATH }}
           remote_host: ${{ secrets.SSH_HOST }}
