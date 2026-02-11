@@ -1,213 +1,585 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" id="html">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Basic Meta Tags -->
+        <meta name="description" content="Software & DevOps Engineer. 7+ years building reliable, scalable systems with Laravel, AWS, and cloud infrastructure. Open to remote roles.">
+        <meta name="author" content="Solomon Nnajieze">
+        <meta name="keywords" content="Laravel, DevOps, Full Stack Developer, PHP, AWS, Cloud Infrastructure, CI/CD, Backend Engineer, Nigeria">
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+        <meta name="language" content="English">
+        <meta name="revisit-after" content="7 days">
+        
+        <!-- Open Graph Tags for Social Media Preview -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Solomon Nnajieze | Software & DevOps Engineer">
+        <meta property="og:description" content="Software & DevOps Engineer. 7+ years building reliable, scalable systems with Laravel, AWS, and cloud infrastructure.">
+        <meta property="og:image" content="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="Solomon Nnajieze - Software & DevOps Engineer">
+        <meta property="og:url" content="{{ config('app.url') }}">
+        <meta property="og:site_name" content="Solomon Nnajieze">
+        <meta property="og:locale" content="en_US">
+        
+        <!-- Twitter Card Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Solomon Nnajieze | Software & DevOps Engineer">
+        <meta name="twitter:description" content="Software & DevOps Engineer. 7+ years building reliable, scalable systems with Laravel, AWS, and cloud infrastructure.">
+        <meta name="twitter:image" content="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}">
+        <meta name="twitter:image:alt" content="Solomon Nnajieze - Software & DevOps Engineer">
+        <meta name="twitter:creator" content="@snnajieze">
+        <meta name="twitter:site" content="@snnajieze">
+        
+        <!-- Additional SEO Tags -->
+        <link rel="canonical" href="{{ config('app.url') }}">
+        <meta name="theme-color" content="#2563eb">
+        <meta name="color-scheme" content="light dark">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Solomon Nnajieze | Software & DevOps Engineer</title>
 
         <link rel="icon" href="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}">
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700&family=jetbrains-mono:400,500,600" rel="stylesheet" />
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @else
             <style>
-                /*! tailwindcss v4.0.7 | MIT License | https://tailwindcss.com */@layer theme{:root,:host{--font-sans:'Instrument Sans',ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-serif:ui-serif,Georgia,Cambria,"Times New Roman",Times,serif;--font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--color-red-50:oklch(.971 .013 17.38);--color-red-100:oklch(.936 .032 17.717);--color-red-200:oklch(.885 .062 18.334);--color-red-300:oklch(.808 .114 19.571);--color-red-400:oklch(.704 .191 22.216);--color-red-500:oklch(.637 .237 25.331);--color-red-600:oklch(.577 .245 27.325);--color-red-700:oklch(.505 .213 27.518);--color-red-800:oklch(.444 .177 26.899);--color-red-900:oklch(.396 .141 25.723);--color-red-950:oklch(.258 .092 26.042);--color-orange-50:oklch(.98 .016 73.684);--color-orange-100:oklch(.954 .038 75.164);--color-orange-200:oklch(.901 .076 70.697);--color-orange-300:oklch(.837 .128 66.29);--color-orange-400:oklch(.75 .183 55.934);--color-orange-500:oklch(.705 .213 47.604);--color-orange-600:oklch(.646 .222 41.116);--color-orange-700:oklch(.553 .195 38.402);--color-orange-800:oklch(.47 .157 37.304);--color-orange-900:oklch(.408 .123 38.172);--color-orange-950:oklch(.266 .079 36.259);--color-amber-50:oklch(.987 .022 95.277);--color-amber-100:oklch(.962 .059 95.617);--color-amber-200:oklch(.924 .12 95.746);--color-amber-300:oklch(.879 .169 91.605);--color-amber-400:oklch(.828 .189 84.429);--color-amber-500:oklch(.769 .188 70.08);--color-amber-600:oklch(.666 .179 58.318);--color-amber-700:oklch(.555 .163 48.998);--color-amber-800:oklch(.473 .137 46.201);--color-amber-900:oklch(.414 .112 45.904);--color-amber-950:oklch(.279 .077 45.635);--color-yellow-50:oklch(.987 .026 102.212);--color-yellow-100:oklch(.973 .071 103.193);--color-yellow-200:oklch(.945 .129 101.54);--color-yellow-300:oklch(.905 .182 98.111);--color-yellow-400:oklch(.852 .199 91.936);--color-yellow-500:oklch(.795 .184 86.047);--color-yellow-600:oklch(.681 .162 75.834);--color-yellow-700:oklch(.554 .135 66.442);--color-yellow-800:oklch(.476 .114 61.907);--color-yellow-900:oklch(.421 .095 57.708);--color-yellow-950:oklch(.286 .066 53.813);--color-lime-50:oklch(.986 .031 120.757);--color-lime-100:oklch(.967 .067 122.328);--color-lime-200:oklch(.938 .127 124.321);--color-lime-300:oklch(.897 .196 126.665);--color-lime-400:oklch(.841 .238 128.85);--color-lime-500:oklch(.768 .233 130.85);--color-lime-600:oklch(.648 .2 131.684);--color-lime-700:oklch(.532 .157 131.589);--color-lime-800:oklch(.453 .124 130.933);--color-lime-900:oklch(.405 .101 131.063);--color-lime-950:oklch(.274 .072 132.109);--color-green-50:oklch(.982 .018 155.826);--color-green-100:oklch(.962 .044 156.743);--color-green-200:oklch(.925 .084 155.995);--color-green-300:oklch(.871 .15 154.449);--color-green-400:oklch(.792 .209 151.711);--color-green-500:oklch(.723 .219 149.579);--color-green-600:oklch(.627 .194 149.214);--color-green-700:oklch(.527 .154 150.069);--color-green-800:oklch(.448 .119 151.328);--color-green-900:oklch(.393 .095 152.535);--color-green-950:oklch(.266 .065 152.934);--color-emerald-50:oklch(.979 .021 166.113);--color-emerald-100:oklch(.95 .052 163.051);--color-emerald-200:oklch(.905 .093 164.15);--color-emerald-300:oklch(.845 .143 164.978);--color-emerald-400:oklch(.765 .177 163.223);--color-emerald-500:oklch(.696 .17 162.48);--color-emerald-600:oklch(.596 .145 163.225);--color-emerald-700:oklch(.508 .118 165.612);--color-emerald-800:oklch(.432 .095 166.913);--color-emerald-900:oklch(.378 .077 168.94);--color-emerald-950:oklch(.262 .051 172.552);--color-teal-50:oklch(.984 .014 180.72);--color-teal-100:oklch(.953 .051 180.801);--color-teal-200:oklch(.91 .096 180.426);--color-teal-300:oklch(.855 .138 181.071);--color-teal-400:oklch(.777 .152 181.912);--color-teal-500:oklch(.704 .14 182.503);--color-teal-600:oklch(.6 .118 184.704);--color-teal-700:oklch(.511 .096 186.391);--color-teal-800:oklch(.437 .078 188.216);--color-teal-900:oklch(.386 .063 188.416);--color-teal-950:oklch(.277 .046 192.524);--color-cyan-50:oklch(.984 .019 200.873);--color-cyan-100:oklch(.956 .045 203.388);--color-cyan-200:oklch(.917 .08 205.041);--color-cyan-300:oklch(.865 .127 207.078);--color-cyan-400:oklch(.789 .154 211.53);--color-cyan-500:oklch(.715 .143 215.221);--color-cyan-600:oklch(.609 .126 221.723);--color-cyan-700:oklch(.52 .105 223.128);--color-cyan-800:oklch(.45 .085 224.283);--color-cyan-900:oklch(.398 .07 227.392);--color-cyan-950:oklch(.302 .056 229.695);--color-sky-50:oklch(.977 .013 236.62);--color-sky-100:oklch(.951 .026 236.824);--color-sky-200:oklch(.901 .058 230.902);--color-sky-300:oklch(.828 .111 230.318);--color-sky-400:oklch(.746 .16 232.661);--color-sky-500:oklch(.685 .169 237.323);--color-sky-600:oklch(.588 .158 241.966);--color-sky-700:oklch(.5 .134 242.749);--color-sky-800:oklch(.443 .11 240.79);--color-sky-900:oklch(.391 .09 240.876);--color-sky-950:oklch(.293 .066 243.157);--color-blue-50:oklch(.97 .014 254.604);--color-blue-100:oklch(.932 .032 255.585);--color-blue-200:oklch(.882 .059 254.128);--color-blue-300:oklch(.809 .105 251.813);--color-blue-400:oklch(.707 .165 254.624);--color-blue-500:oklch(.623 .214 259.815);--color-blue-600:oklch(.546 .245 262.881);--color-blue-700:oklch(.488 .243 264.376);--color-blue-800:oklch(.424 .199 265.638);--color-blue-900:oklch(.379 .146 265.522);--color-blue-950:oklch(.282 .091 267.935);--color-indigo-50:oklch(.962 .018 272.314);--color-indigo-100:oklch(.93 .034 272.788);--color-indigo-200:oklch(.87 .065 274.039);--color-indigo-300:oklch(.785 .115 274.713);--color-indigo-400:oklch(.673 .182 276.935);--color-indigo-500:oklch(.585 .233 277.117);--color-indigo-600:oklch(.511 .262 276.966);--color-indigo-700:oklch(.457 .24 277.023);--color-indigo-800:oklch(.398 .195 277.366);--color-indigo-900:oklch(.359 .144 278.697);--color-indigo-950:oklch(.257 .09 281.288);--color-violet-50:oklch(.969 .016 293.756);--color-violet-100:oklch(.943 .029 294.588);--color-violet-200:oklch(.894 .057 293.283);--color-violet-300:oklch(.811 .111 293.571);--color-violet-400:oklch(.702 .183 293.541);--color-violet-500:oklch(.606 .25 292.717);--color-violet-600:oklch(.541 .281 293.009);--color-violet-700:oklch(.491 .27 292.581);--color-violet-800:oklch(.432 .232 292.759);--color-violet-900:oklch(.38 .189 293.745);--color-violet-950:oklch(.283 .141 291.089);--color-purple-50:oklch(.977 .014 308.299);--color-purple-100:oklch(.946 .033 307.174);--color-purple-200:oklch(.902 .063 306.703);--color-purple-300:oklch(.827 .119 306.383);--color-purple-400:oklch(.714 .203 305.504);--color-purple-500:oklch(.627 .265 303.9);--color-purple-600:oklch(.558 .288 302.321);--color-purple-700:oklch(.496 .265 301.924);--color-purple-800:oklch(.438 .218 303.724);--color-purple-900:oklch(.381 .176 304.987);--color-purple-950:oklch(.291 .149 302.717);--color-fuchsia-50:oklch(.977 .017 320.058);--color-fuchsia-100:oklch(.952 .037 318.852);--color-fuchsia-200:oklch(.903 .076 319.62);--color-fuchsia-300:oklch(.833 .145 321.434);--color-fuchsia-400:oklch(.74 .238 322.16);--color-fuchsia-500:oklch(.667 .295 322.15);--color-fuchsia-600:oklch(.591 .293 322.896);--color-fuchsia-700:oklch(.518 .253 323.949);--color-fuchsia-800:oklch(.452 .211 324.591);--color-fuchsia-900:oklch(.401 .17 325.612);--color-fuchsia-950:oklch(.293 .136 325.661);--color-pink-50:oklch(.971 .014 343.198);--color-pink-100:oklch(.948 .028 342.258);--color-pink-200:oklch(.899 .061 343.231);--color-pink-300:oklch(.823 .12 346.018);--color-pink-400:oklch(.718 .202 349.761);--color-pink-500:oklch(.656 .241 354.308);--color-pink-600:oklch(.592 .249 .584);--color-pink-700:oklch(.525 .223 3.958);--color-pink-800:oklch(.459 .187 3.815);--color-pink-900:oklch(.408 .153 2.432);--color-pink-950:oklch(.284 .109 3.907);--color-rose-50:oklch(.969 .015 12.422);--color-rose-100:oklch(.941 .03 12.58);--color-rose-200:oklch(.892 .058 10.001);--color-rose-300:oklch(.81 .117 11.638);--color-rose-400:oklch(.712 .194 13.428);--color-rose-500:oklch(.645 .246 16.439);--color-rose-600:oklch(.586 .253 17.585);--color-rose-700:oklch(.514 .222 16.935);--color-rose-800:oklch(.455 .188 13.697);--color-rose-900:oklch(.41 .159 10.272);--color-rose-950:oklch(.271 .105 12.094);--color-slate-50:oklch(.984 .003 247.858);--color-slate-100:oklch(.968 .007 247.896);--color-slate-200:oklch(.929 .013 255.508);--color-slate-300:oklch(.869 .022 252.894);--color-slate-400:oklch(.704 .04 256.788);--color-slate-500:oklch(.554 .046 257.417);--color-slate-600:oklch(.446 .043 257.281);--color-slate-700:oklch(.372 .044 257.287);--color-slate-800:oklch(.279 .041 260.031);--color-slate-900:oklch(.208 .042 265.755);--color-slate-950:oklch(.129 .042 264.695);--color-gray-50:oklch(.985 .002 247.839);--color-gray-100:oklch(.967 .003 264.542);--color-gray-200:oklch(.928 .006 264.531);--color-gray-300:oklch(.872 .01 258.338);--color-gray-400:oklch(.707 .022 261.325);--color-gray-500:oklch(.551 .027 264.364);--color-gray-600:oklch(.446 .03 256.802);--color-gray-700:oklch(.373 .034 259.733);--color-gray-800:oklch(.278 .033 256.848);--color-gray-900:oklch(.21 .034 264.665);--color-gray-950:oklch(.13 .028 261.692);--color-zinc-50:oklch(.985 0 0);--color-zinc-100:oklch(.967 .001 286.375);--color-zinc-200:oklch(.92 .004 286.32);--color-zinc-300:oklch(.871 .006 286.286);--color-zinc-400:oklch(.705 .015 286.067);--color-zinc-500:oklch(.552 .016 285.938);--color-zinc-600:oklch(.442 .017 285.786);--color-zinc-700:oklch(.37 .013 285.805);--color-zinc-800:oklch(.274 .006 286.033);--color-zinc-900:oklch(.21 .006 285.885);--color-zinc-950:oklch(.141 .005 285.823);--color-neutral-50:oklch(.985 0 0);--color-neutral-100:oklch(.97 0 0);--color-neutral-200:oklch(.922 0 0);--color-neutral-300:oklch(.87 0 0);--color-neutral-400:oklch(.708 0 0);--color-neutral-500:oklch(.556 0 0);--color-neutral-600:oklch(.439 0 0);--color-neutral-700:oklch(.371 0 0);--color-neutral-800:oklch(.269 0 0);--color-neutral-900:oklch(.205 0 0);--color-neutral-950:oklch(.145 0 0);--color-stone-50:oklch(.985 .001 106.423);--color-stone-100:oklch(.97 .001 106.424);--color-stone-200:oklch(.923 .003 48.717);--color-stone-300:oklch(.869 .005 56.366);--color-stone-400:oklch(.709 .01 56.259);--color-stone-500:oklch(.553 .013 58.071);--color-stone-600:oklch(.444 .011 73.639);--color-stone-700:oklch(.374 .01 67.558);--color-stone-800:oklch(.268 .007 34.298);--color-stone-900:oklch(.216 .006 56.043);--color-stone-950:oklch(.147 .004 49.25);--color-black:#000;--color-white:#fff;--spacing:.25rem;--breakpoint-sm:40rem;--breakpoint-md:48rem;--breakpoint-lg:64rem;--breakpoint-xl:80rem;--breakpoint-2xl:96rem;--container-3xs:16rem;--container-2xs:18rem;--container-xs:20rem;--container-sm:24rem;--container-md:28rem;--container-lg:32rem;--container-xl:36rem;--container-2xl:42rem;--container-3xl:48rem;--container-4xl:56rem;--container-5xl:64rem;--container-6xl:72rem;--container-7xl:80rem;--text-xs:.75rem;--text-xs--line-height:calc(1/.75);--text-sm:.875rem;--text-sm--line-height:calc(1.25/.875);--text-base:1rem;--text-base--line-height: 1.5 ;--text-lg:1.125rem;--text-lg--line-height:calc(1.75/1.125);--text-xl:1.25rem;--text-xl--line-height:calc(1.75/1.25);--text-2xl:1.5rem;--text-2xl--line-height:calc(2/1.5);--text-3xl:1.875rem;--text-3xl--line-height: 1.2 ;--text-4xl:2.25rem;--text-4xl--line-height:calc(2.5/2.25);--text-5xl:3rem;--text-5xl--line-height:1;--text-6xl:3.75rem;--text-6xl--line-height:1;--text-7xl:4.5rem;--text-7xl--line-height:1;--text-8xl:6rem;--text-8xl--line-height:1;--text-9xl:8rem;--text-9xl--line-height:1;--font-weight-thin:100;--font-weight-extralight:200;--font-weight-light:300;--font-weight-normal:400;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--font-weight-extrabold:800;--font-weight-black:900;--tracking-tighter:-.05em;--tracking-tight:-.025em;--tracking-normal:0em;--tracking-wide:.025em;--tracking-wider:.05em;--tracking-widest:.1em;--leading-tight:1.25;--leading-snug:1.375;--leading-normal:1.5;--leading-relaxed:1.625;--leading-loose:2;--radius-xs:.125rem;--radius-sm:.25rem;--radius-md:.375rem;--radius-lg:.5rem;--radius-xl:.75rem;--radius-2xl:1rem;--radius-3xl:1.5rem;--radius-4xl:2rem;--shadow-2xs:0 1px #0000000d;--shadow-xs:0 1px 2px 0 #0000000d;--shadow-sm:0 1px 3px 0 #0000001a,0 1px 2px -1px #0000001a;--shadow-md:0 4px 6px -1px #0000001a,0 2px 4px -2px #0000001a;--shadow-lg:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--shadow-xl:0 20px 25px -5px #0000001a,0 8px 10px -6px #0000001a;--shadow-2xl:0 25px 50px -12px #00000040;--inset-shadow-2xs:inset 0 1px #0000000d;--inset-shadow-xs:inset 0 1px 1px #0000000d;--inset-shadow-sm:inset 0 2px 4px #0000000d;--drop-shadow-xs:0 1px 1px #0000000d;--drop-shadow-sm:0 1px 2px #00000026;--drop-shadow-md:0 3px 3px #0000001f;--drop-shadow-lg:0 4px 4px #00000026;--drop-shadow-xl:0 9px 7px #0000001a;--drop-shadow-2xl:0 25px 25px #00000026;--ease-in:cubic-bezier(.4,0,1,1);--ease-out:cubic-bezier(0,0,.2,1);--ease-in-out:cubic-bezier(.4,0,.2,1);--animate-spin:spin 1s linear infinite;--animate-ping:ping 1s cubic-bezier(0,0,.2,1)infinite;--animate-pulse:pulse 2s cubic-bezier(.4,0,.6,1)infinite;--animate-bounce:bounce 1s infinite;--blur-xs:4px;--blur-sm:8px;--blur-md:12px;--blur-lg:16px;--blur-xl:24px;--blur-2xl:40px;--blur-3xl:64px;--perspective-dramatic:100px;--perspective-near:300px;--perspective-normal:500px;--perspective-midrange:800px;--perspective-distant:1200px;--aspect-video:16/9;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4,0,.2,1);--default-font-family:var(--font-sans);--default-font-feature-settings:var(--font-sans--font-feature-settings);--default-font-variation-settings:var(--font-sans--font-variation-settings);--default-mono-font-family:var(--font-mono);--default-mono-font-feature-settings:var(--font-mono--font-feature-settings);--default-mono-font-variation-settings:var(--font-mono--font-variation-settings)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}body{line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1;color:color-mix(in oklab,currentColor 50%,transparent)}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){-webkit-appearance:button;-moz-appearance:button;appearance:button}::file-selector-button{-webkit-appearance:button;-moz-appearance:button;appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.absolute{position:absolute}.relative{position:relative}.static{position:static}.inset-0{inset:calc(var(--spacing)*0)}.-mt-\[4\.9rem\]{margin-top:-4.9rem}.-mb-px{margin-bottom:-1px}.mb-1{margin-bottom:calc(var(--spacing)*1)}.mb-2{margin-bottom:calc(var(--spacing)*2)}.mb-4{margin-bottom:calc(var(--spacing)*4)}.mb-6{margin-bottom:calc(var(--spacing)*6)}.-ml-8{margin-left:calc(var(--spacing)*-8)}.flex{display:flex}.hidden{display:none}.inline-block{display:inline-block}.inline-flex{display:inline-flex}.table{display:table}.aspect-\[335\/376\]{aspect-ratio:335/376}.h-1{height:calc(var(--spacing)*1)}.h-1\.5{height:calc(var(--spacing)*1.5)}.h-2{height:calc(var(--spacing)*2)}.h-2\.5{height:calc(var(--spacing)*2.5)}.h-3{height:calc(var(--spacing)*3)}.h-3\.5{height:calc(var(--spacing)*3.5)}.h-14{height:calc(var(--spacing)*14)}.h-14\.5{height:calc(var(--spacing)*14.5)}.min-h-screen{min-height:100vh}.w-1{width:calc(var(--spacing)*1)}.w-1\.5{width:calc(var(--spacing)*1.5)}.w-2{width:calc(var(--spacing)*2)}.w-2\.5{width:calc(var(--spacing)*2.5)}.w-3{width:calc(var(--spacing)*3)}.w-3\.5{width:calc(var(--spacing)*3.5)}.w-\[448px\]{width:448px}.w-full{width:100%}.max-w-\[335px\]{max-width:335px}.max-w-none{max-width:none}.flex-1{flex:1}.shrink-0{flex-shrink:0}.translate-y-0{--tw-translate-y:calc(var(--spacing)*0);translate:var(--tw-translate-x)var(--tw-translate-y)}.transform{transform:var(--tw-rotate-x)var(--tw-rotate-y)var(--tw-rotate-z)var(--tw-skew-x)var(--tw-skew-y)}.flex-col{flex-direction:column}.flex-col-reverse{flex-direction:column-reverse}.items-center{align-items:center}.justify-center{justify-content:center}.justify-end{justify-content:flex-end}.gap-3{gap:calc(var(--spacing)*3)}.gap-4{gap:calc(var(--spacing)*4)}:where(.space-x-1>:not(:last-child)){--tw-space-x-reverse:0;margin-inline-start:calc(calc(var(--spacing)*1)*var(--tw-space-x-reverse));margin-inline-end:calc(calc(var(--spacing)*1)*calc(1 - var(--tw-space-x-reverse)))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:3.40282e38px}.rounded-sm{border-radius:var(--radius-sm)}.rounded-t-lg{border-top-left-radius:var(--radius-lg);border-top-right-radius:var(--radius-lg)}.rounded-br-lg{border-bottom-right-radius:var(--radius-lg)}.rounded-bl-lg{border-bottom-left-radius:var(--radius-lg)}.border{border-style:var(--tw-border-style);border-width:1px}.border-\[\#19140035\]{border-color:#19140035}.border-\[\#e3e3e0\]{border-color:#e3e3e0}.border-black{border-color:var(--color-black)}.border-transparent{border-color:#0000}.bg-\[\#1b1b18\]{background-color:#1b1b18}.bg-\[\#FDFDFC\]{background-color:#fdfdfc}.bg-\[\#dbdbd7\]{background-color:#dbdbd7}.bg-\[\#fff2f2\]{background-color:#fff2f2}.bg-white{background-color:var(--color-white)}.p-6{padding:calc(var(--spacing)*6)}.px-5{padding-inline:calc(var(--spacing)*5)}.py-1{padding-block:calc(var(--spacing)*1)}.py-1\.5{padding-block:calc(var(--spacing)*1.5)}.py-2{padding-block:calc(var(--spacing)*2)}.pb-12{padding-bottom:calc(var(--spacing)*12)}.text-sm{font-size:var(--text-sm);line-height:var(--tw-leading,var(--text-sm--line-height))}.text-\[13px\]{font-size:13px}.leading-\[20px\]{--tw-leading:20px;line-height:20px}.leading-normal{--tw-leading:var(--leading-normal);line-height:var(--leading-normal)}.font-medium{--tw-font-weight:var(--font-weight-medium);font-weight:var(--font-weight-medium)}.text-\[\#1b1b18\]{color:#1b1b18}.text-\[\#706f6c\]{color:#706f6c}.text-\[\#F53003\],.text-\[\#f53003\]{color:#f53003}.text-white{color:var(--color-white)}.underline{text-decoration-line:underline}.underline-offset-4{text-underline-offset:4px}.opacity-100{opacity:1}.shadow-\[0px_0px_1px_0px_rgba\(0\,0\,0\,0\.03\)\,0px_1px_2px_0px_rgba\(0\,0\,0\,0\.06\)\]{--tw-shadow:0px 0px 1px 0px var(--tw-shadow-color,#00000008),0px 1px 2px 0px var(--tw-shadow-color,#0000000f);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.shadow-\[inset_0px_0px_0px_1px_rgba\(26\,26\,0\,0\.16\)\]{--tw-shadow:inset 0px 0px 0px 1px var(--tw-shadow-color,#1a1a0029);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.\!filter{filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)!important}.filter{filter:var(--tw-blur,)var(--tw-brightness,)var(--tw-contrast,)var(--tw-grayscale,)var(--tw-hue-rotate,)var(--tw-invert,)var(--tw-saturate,)var(--tw-sepia,)var(--tw-drop-shadow,)}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.transition-opacity{transition-property:opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))}.delay-300{transition-delay:.3s}.duration-750{--tw-duration:.75s;transition-duration:.75s}.not-has-\[nav\]\:hidden:not(:has(:is(nav))){display:none}.before\:absolute:before{content:var(--tw-content);position:absolute}.before\:top-0:before{content:var(--tw-content);top:calc(var(--spacing)*0)}.before\:top-1\/2:before{content:var(--tw-content);top:50%}.before\:bottom-0:before{content:var(--tw-content);bottom:calc(var(--spacing)*0)}.before\:bottom-1\/2:before{content:var(--tw-content);bottom:50%}.before\:left-\[0\.4rem\]:before{content:var(--tw-content);left:.4rem}.before\:border-l:before{content:var(--tw-content);border-left-style:var(--tw-border-style);border-left-width:1px}.before\:border-\[\#e3e3e0\]:before{content:var(--tw-content);border-color:#e3e3e0}@media (hover:hover){.hover\:border-\[\#1915014a\]:hover{border-color:#1915014a}.hover\:border-\[\#19140035\]:hover{border-color:#19140035}.hover\:border-black:hover{border-color:var(--color-black)}.hover\:bg-black:hover{background-color:var(--color-black)}}@media (width>=64rem){.lg\:-mt-\[6\.6rem\]{margin-top:-6.6rem}.lg\:mb-0{margin-bottom:calc(var(--spacing)*0)}.lg\:mb-6{margin-bottom:calc(var(--spacing)*6)}.lg\:-ml-px{margin-left:-1px}.lg\:ml-0{margin-left:calc(var(--spacing)*0)}.lg\:block{display:block}.lg\:aspect-auto{aspect-ratio:auto}.lg\:w-\[438px\]{width:438px}.lg\:max-w-4xl{max-width:var(--container-4xl)}.lg\:grow{flex-grow:1}.lg\:flex-row{flex-direction:row}.lg\:justify-center{justify-content:center}.lg\:rounded-t-none{border-top-left-radius:0;border-top-right-radius:0}.lg\:rounded-tl-lg{border-top-left-radius:var(--radius-lg)}.lg\:rounded-r-lg{border-top-right-radius:var(--radius-lg);border-bottom-right-radius:var(--radius-lg)}.lg\:rounded-br-none{border-bottom-right-radius:0}.lg\:p-8{padding:calc(var(--spacing)*8)}.lg\:p-20{padding:calc(var(--spacing)*20)}}@media (prefers-color-scheme:dark){.dark\:block{display:block}.dark\:hidden{display:none}.dark\:border-\[\#3E3E3A\]{border-color:#3e3e3a}.dark\:border-\[\#eeeeec\]{border-color:#eeeeec}.dark\:bg-\[\#0a0a0a\]{background-color:#0a0a0a}.dark\:bg-\[\#1D0002\]{background-color:#1d0002}.dark\:bg-\[\#3E3E3A\]{background-color:#3e3e3a}.dark\:bg-\[\#161615\]{background-color:#161615}.dark\:bg-\[\#eeeeec\]{background-color:#eeeeec}.dark\:text-\[\#1C1C1A\]{color:#1c1c1a}.dark\:text-\[\#A1A09A\]{color:#a1a09a}.dark\:text-\[\#EDEDEC\]{color:#ededec}.dark\:text-\[\#F61500\]{color:#f61500}.dark\:text-\[\#FF4433\]{color:#f43}.dark\:shadow-\[inset_0px_0px_0px_1px_\#fffaed2d\]{--tw-shadow:inset 0px 0px 0px 1px var(--tw-shadow-color,#fffaed2d);box-shadow:var(--tw-inset-shadow),var(--tw-inset-ring-shadow),var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow)}.dark\:before\:border-\[\#3E3E3A\]:before{content:var(--tw-content);border-color:#3e3e3a}@media (hover:hover){.dark\:hover\:border-\[\#3E3E3A\]:hover{border-color:#3e3e3a}.dark\:hover\:border-\[\#62605b\]:hover{border-color:#62605b}.dark\:hover\:border-white:hover{border-color:var(--color-white)}.dark\:hover\:bg-white:hover{background-color:var(--color-white)}}}@starting-style{.starting\:translate-y-4{--tw-translate-y:calc(var(--spacing)*4);translate:var(--tw-translate-x)var(--tw-translate-y)}}@starting-style{.starting\:translate-y-6{--tw-translate-y:calc(var(--spacing)*6);translate:var(--tw-translate-x)var(--tw-translate-y)}}@starting-style{.starting\:opacity-0{opacity:0}}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes ping{75%,to{opacity:0;transform:scale(2)}}@keyframes pulse{50%{opacity:.5}}@keyframes bounce{0%,to{animation-timing-function:cubic-bezier(.8,0,1,1);transform:translateY(-25%)}50%{animation-timing-function:cubic-bezier(0,0,.2,1);transform:none}}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property --tw-rotate-x{syntax:"*";inherits:false;initial-value:rotateX(0)}@property --tw-rotate-y{syntax:"*";inherits:false;initial-value:rotateY(0)}@property --tw-rotate-z{syntax:"*";inherits:false;initial-value:rotateZ(0)}@property --tw-skew-x{syntax:"*";inherits:false;initial-value:skewX(0)}@property --tw-skew-y{syntax:"*";inherits:false;initial-value:skewY(0)}@property --tw-space-x-reverse{syntax:"*";inherits:false;initial-value:0}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-leading{syntax:"*";inherits:false}@property --tw-font-weight{syntax:"*";inherits:false}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-blur{syntax:"*";inherits:false}@property --tw-brightness{syntax:"*";inherits:false}@property --tw-contrast{syntax:"*";inherits:false}@property --tw-grayscale{syntax:"*";inherits:false}@property --tw-hue-rotate{syntax:"*";inherits:false}@property --tw-invert{syntax:"*";inherits:false}@property --tw-opacity{syntax:"*";inherits:false}@property --tw-saturate{syntax:"*";inherits:false}@property --tw-sepia{syntax:"*";inherits:false}@property --tw-drop-shadow{syntax:"*";inherits:false}@property --tw-duration{syntax:"*";inherits:false}@property --tw-content{syntax:"*";inherits:false;initial-value:""}
+                * { margin: 0; padding: 0; box-sizing: border-box; }
+                html { scroll-behavior: smooth; }
+                body { font-family: 'Instrument Sans', system-ui, sans-serif; line-height: 1.6; color: #18181b; }
+                .dark { color-scheme: dark; }
+                .dark body { color: #fafafa; background: #09090b; }
+                a { text-decoration: none; color: inherit; }
+                .bg-white { background: white; }
+                .dark .bg-white { background: inherit; }
+                .bg-zinc-50 { background: #fafafa; }
+                .dark .bg-zinc-50 { background: rgba(24, 24, 27, 0.5); }
+                .bg-zinc-100 { background: #f4f4f5; }
+                .bg-zinc-900 { background: #18181b; }
+                .dark .bg-zinc-900 { background: #18181b; }
+                .dark .bg-zinc-950 { background: #09090b; }
+                .text-blue-600 { color: #2563eb; }
+                .text-zinc-400 { color: #a1a1a6; }
+                .text-zinc-500 { color: #71717a; }
+                .text-zinc-600 { color: #52525b; }
+                .text-zinc-700 { color: #3f3f46; }
+                .dark .text-zinc-300 { color: #d4d4d8; }
+                .dark .text-zinc-400 { color: #a1a1a6; }
+                .dark .text-blue-400 { color: #60a5fa; }
+                .border-zinc-200 { border-color: #e4e4e7; }
+                .border-zinc-800 { border-color: #27272a; }
+                .border-blue-600 { border-color: #2563eb; }
+                .dark .border-zinc-800 { border-color: #27272a; }
+                .border { border: 1px solid; }
+                .border-b { border-bottom: 1px solid; }
+                .border-l-2 { border-left: 2px solid; }
+                .border-t { border-top: 1px solid; }
+                .rounded-lg { border-radius: 0.5rem; }
+                .rounded-full { border-radius: 9999px; }
+                .p-2 { padding: 0.5rem; }
+                .p-6 { padding: 1.5rem; }
+                .p-8 { padding: 2rem; }
+                .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+                .py-3 { padding: 0.75rem; }
+                .py-4 { padding: 1rem; }
+                .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+                .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+                .pt-32 { padding-top: 8rem; }
+                .pb-20 { padding-bottom: 5rem; }
+                .mt-16 { margin-top: 4rem; }
+                .mb-2 { margin-bottom: 0.5rem; }
+                .mb-3 { margin-bottom: 0.75rem; }
+                .mb-4 { margin-bottom: 1rem; }
+                .mb-6 { margin-bottom: 1.5rem; }
+                .mb-8 { margin-bottom: 2rem; }
+                .mb-12 { margin-bottom: 3rem; }
+                .ml-3 { margin-left: 0.75rem; }
+                .mr-3 { margin-right: 0.75rem; }
+                .mx-auto { margin-left: auto; margin-right: auto; }
+                .flex { display: flex; }
+                .hidden { display: none; }
+                .inline-block { display: inline-block; }
+                .grid { display: grid; }
+                .w-5 { width: 1.25rem; }
+                .w-6 { width: 1.5rem; }
+                .w-32 { width: 8rem; }
+                .w-full { width: 100%; }
+                .h-5 { height: 1.25rem; }
+                .h-6 { height: 1.5rem; }
+                .h-32 { height: 8rem; }
+                .h-6 { height: 1.5rem; }
+                .min-h-screen { min-height: 100vh; }
+                .max-w-2xl { max-width: 42rem; }
+                .max-w-4xl { max-width: 56rem; }
+                .max-w-6xl { max-width: 72rem; }
+                .flex-col { flex-direction: column; }
+                .flex-row { flex-direction: row; }
+                .items-center { align-items: center; }
+                .items-start { align-items: flex-start; }
+                .justify-center { justify-content: center; }
+                .justify-between { justify-content: space-between; }
+                .justify-end { justify-content: flex-end; }
+                .gap-2 { gap: 0.5rem; }
+                .gap-3 { gap: 0.75rem; }
+                .gap-4 { gap: 1rem; }
+                .gap-6 { gap: 1.5rem; }
+                .gap-8 { gap: 2rem; }
+                .space-y-2 > :not(:last-child) { margin-bottom: 0.5rem; }
+                .space-y-3 > :not(:last-child) { margin-bottom: 0.75rem; }
+                .space-y-6 > :not(:last-child) { margin-bottom: 1.5rem; }
+                .space-y-8 > :not(:last-child) { margin-bottom: 2rem; }
+                .text-sm { font-size: 0.875rem; }
+                .text-base { font-size: 1rem; }
+                .text-lg { font-size: 1.125rem; }
+                .text-xl { font-size: 1.25rem; }
+                .text-2xl { font-size: 1.5rem; }
+                .text-4xl { font-size: 2.25rem; }
+                .text-5xl { font-size: 3rem; }
+                .font-bold { font-weight: 700; }
+                .leading-tight { line-height: 1.25; }
+                .leading-normal { line-height: 1.5; }
+                .leading-relaxed { line-height: 1.625; }
+                .transition-colors { transition-property: color, background-color, border-color; transition-duration: 0.15s; }
+                .fixed { position: fixed; }
+                .absolute { position: absolute; }
+                .relative { position: relative; }
+                .top-0 { top: 0; }
+                .inset-0 { inset: 0; }
+                .z-50 { z-index: 50; }
+                .z-10 { z-index: 10; }
+                .-z-10 { z-index: -10; }
+                .overflow-hidden { overflow: hidden; }
+                .bg-blue-600 { background: #2563eb; }
+                .bg-blue-50 { background: #eff6ff; }
+                .bg-blue-100 { background: #dbeafe; }
+                .bg-blue-700 { background: #1d4ed8; }
+                .bg-blue-900 { background: #172554; }
+                .bg-blue-950 { background: #0c2d5c; }
+                .bg-green-100 { background: #dcfce7; }
+                .bg-purple-100 { background: #f3e8ff; }
+                .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
+                .from-blue-50 { --tw-gradient-from: #eff6ff; }
+                .to-transparent { --tw-gradient-to: transparent; }
+                .dark .from-blue-950 { --tw-gradient-from: #0c2d5c; }
+                .dark .from-blue-950\/20 { --tw-gradient-from: rgba(12, 45, 92, 0.2); }
+                .dark .to-transparent { --tw-gradient-to: transparent; }
+                .opacity-80 { opacity: 0.8; }
+                .hover\:bg-zinc-100:hover { background: #f4f4f5; }
+                .hover\:bg-blue-50:hover { background: #eff6ff; }
+                .hover\:bg-blue-700:hover { background: #1d4ed8; }
+                .hover\:bg-blue-950:hover { background: #0c2d5c; }
+                .hover\:border-blue-600:hover { border-color: #2563eb; }
+                .hover\:border-blue-400:hover { border-color: #60a5fa; }
+                .hover\:text-blue-600:hover { color: #2563eb; }
+                .hover\:underline:hover { text-decoration: underline; }
+                .dark .dark\:hover\:bg-zinc-900:hover { background: #18181b; }
+                .dark .dark\:hover\:border-blue-400:hover { border-color: #60a5fa; }
+                .dark .dark\:hover\:text-blue-400:hover { color: #60a5fa; }
+                .dark .dark\:text-zinc-50 { color: #fafafa; }
+                .dark .dark\:bg-zinc-900\/50 { background: rgba(24, 24, 27, 0.5); }
+                .dark .dark\:border-blue-400 { border-color: #60a5fa; }
+                .dark .dark\:text-blue-300 { color: #7dd3fc; }
+                .dark .dark\:bg-blue-900\/30 { background: rgba(23, 37, 84, 0.3); }
+                .dark .dark\:bg-green-900\/30 { background: rgba(20, 83, 45, 0.3); }
+                .dark .dark\:bg-purple-900\/30 { background: rgba(63, 15, 92, 0.3); }
+                .dark .dark\:text-green-300 { color: #86efac; }
+                .dark .dark\:text-purple-300 { color: #d8b4fe; }
+                .dark .dark\:bg-zinc-800 { background: #27272a; }
+                nav { backdrop-filter: blur(10px); }
+                @media (max-width: 47.9rem) { .md\:hidden { display: none; } .md\:flex { display: none; } }
+                @media (min-width: 48rem) { .md\:flex { display: flex; } .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .md\:gap-8 { gap: 2rem; } .md\:flex-row { flex-direction: row; } }
             </style>
         @endif
     </head>
-    <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-        <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6 not-has-[nav]:hidden">
-            @if (Route::has('login'))
-                <nav class="flex items-center justify-end gap-4">
-                    @auth
-                        <a
-                            href="{{ url('/dashboard') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal"
-                        >
-                            Dashboard
-                        </a>
-                    @else
-                        <a
-                            href="{{ route('login') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
-                        >
-                            Log in
-                        </a>
-
-                        @if (Route::has('register'))
-                            <a
-                                href="{{ route('register') }}"
-                                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                                Register
-                            </a>
-                        @endif
-                    @endauth
-                </nav>
-            @endif
-        </header>
-
-        <section id="CallMe" class="relative py-14 mt-[7px] bg-black">
-            <div class="z-10 absolute opacity-90 rounded-full blur-[200px] w-[40%] h-[40%] bg-blue-600 top-[200px] ml-[20%]">
+    <body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 transition-colors">
+        <!-- Navigation -->
+        <nav class="fixed top-0 w-full bg-white/80 dark:bg-zinc-950/80 border-b border-zinc-200 dark:border-zinc-800 z-50">
+            <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+                <div class="font-bold text-xl text-blue-600">SN</div>
+                <div id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors cursor-pointer">
+                    <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </div>
+                <div id="mobileMenu" class="hidden md:hidden absolute top-16 left-0 right-0 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800 p-6 flex flex-col gap-4">
+                    <a href="#hero" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#about" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+                    <a href="#skills" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Skills</a>
+                    <a href="#projects" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
+                    <a href="#experience" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experience</a>
+                    <a href="#writing" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Writing</a>
+                    <a href="#contact" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#hero" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#about" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+                    <a href="#skills" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Skills</a>
+                    <a href="#projects" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
+                    <a href="#experience" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experience</a>
+                    <a href="#writing" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Writing</a>
+                    <a href="#contact" class="text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+                <button id="themeToggle" class="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">
+                    <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1m-16 0H1m15.364 1.636l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                </button>
             </div>
-            <div id="GET IN TOUCH"
-                class="flex  select-auto mx-auto items-center justify-center gap-3 sm:pb-1 w-[210px] sm:w-[410px] border-b-4 sm:border-b-8 border-[#2563eb] border-primary font-black">
-                <svg aria-hidden="true" class="icon" width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 50 53" id="call_us">
-                <path
-                    d="M21.4286 0C15.5134 0 10.7143 4.74792 10.7143 10.6C10.7143 16.4521 15.5134 21.2 21.4286 21.2C27.3437 21.2 32.1429 16.4521 32.1429 10.6C32.1429 4.74792 27.3437 0 21.4286 0ZM16.0714 24.7333C7.17076 24.7333 0 31.8276 0 40.6333V42.4C0 46.3198 3.1808 49.4667 7.14286 49.4667H28.5714V45.9333H17.8571V31.8H28.5714V24.8299C27.9855 24.7609 27.3856 24.7333 26.7857 24.7333H16.0714ZM32.1429 24.7333V35.3333H21.4286V42.4H32.1429V53H39.2857V42.4H50V35.3333H39.2857V24.7333H32.1429Z"
-                    fill="#2563eb"></path>
-                </svg>
-                <h2 class="text-white text-2xl sm:text-[48px]">GET IN TOUCH</h2>
-            </div>
-            <div class="z-20 relative px-5 mt-20 md:mt-24 flex flex-wrap gap-7 justify-center lg:max-w-[800px] mx-auto ">
+        </nav>
 
-                <a target="_blank" href="https://github.com/snnajieze">
-                <div
-                class="w-[100px] hover:scale-[1.1] h-[125px] sm:w-[200px] sm:h-[225px] gap-1 md:gap-4 flex flex-col  px-2 py-3 justify-center items-center bg-white  bg-opacity-30 rounded-[25px]">
-                <svg aria-hidden="true" class="icon w-[64px] sm:w-[100px] h-[64px] sm:h-[100px]" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" id="github">
-                    <path
-                    d="M35.582 93.672C37.004 93.06 38 91.646 38 90V79.2C38 78.806 38.032 78.396 38.082 77.98C38.054 77.988 38.028 77.994 38 78C38 78 32 78 30.8 78C27.8 78 25.2 76.8 24 74.4C22.6 71.8 22 67.4 18.4 65C17.8 64.6 18.2 64 19.4 64C20.6 64.2 23.2 65.8 24.8 68C26.6 70.2 28.4 72 31.6 72C36.574 72 39.24 71.75 40.844 70.89C42.712 68.112 45.298 66 48 66V65.95C36.664 65.586 29.422 61.818 26.05 56C18.72 56.084 12.338 56.81 8.696 57.414C8.58 56.76 8.48 56.102 8.394 55.44C11.988 54.848 18.08 54.146 25.084 54.012C24.86 53.46 24.666 52.894 24.502 52.314C17.48 51.958 11.42 52.236 8.128 52.508C8.088 51.844 8.034 51.182 8.026 50.51C11.324 50.24 17.22 49.97 24.062 50.288C23.904 49.288 23.802 48.266 23.802 47.202C23.802 43.802 25.002 40.202 27.202 37.202C26.202 33.802 24.802 26.602 27.602 24.002C33.002 24.002 36.802 26.602 38.602 28.202C42 26.8 45.8 26 50 26C54.2 26 58 26.8 61.2 28.2C63 26.6 66.8 24 72.2 24C75.2 26.8 73.6 34 72.6 37.2C74.8 40.2 76 43.6 75.8 47.2C75.8 48.168 75.71 49.102 75.58 50.018C82.578 49.674 88.634 49.95 91.988 50.222C91.984 50.896 91.922 51.554 91.886 52.22C88.544 51.944 82.336 51.66 75.168 52.042C74.99 52.714 74.774 53.368 74.518 54.002C81.61 54.094 87.848 54.78 91.614 55.38C91.528 56.044 91.428 56.702 91.312 57.354C87.488 56.742 80.97 56.026 73.554 55.99C70.224 61.746 63.114 65.5 52 65.938V66C57.2 66 62 73.8 62 79.2V90C62 91.646 62.996 93.06 64.418 93.672C82.74 87.608 96 70.328 96 50C96 24.636 75.366 4 50 4C24.634 4 4 24.636 4 50C4 70.328 17.26 87.608 35.582 93.672Z"
-                    fill="#2563eb"></path>
-                </svg>
-                <h3 class="text-base capitalize  font-black text-[#2563eb]  sm:text-[28px]">github</h3>
-                <p class="text-sm text-center font-regular text-[#A4A4A5] sm:text-xl  ">@snnajieze</p>
-                </div>
-                </a>
-
-                <a target="_blank" href="https://www.linkedin.com/in/snnajieze">
-                <div
-                class="w-[100px] hover:scale-[1.1] h-[125px] sm:w-[200px] sm:h-[225px] gap-1 md:gap-4 flex flex-col  px-2 py-3 justify-center items-center bg-white  bg-opacity-30 rounded-[25px]">
-                <svg aria-hidden="true" class="icon w-[64px] sm:w-[100px] h-[64px] sm:h-[100px]" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" id="linkedin">
-                    <path
-                    d="M87.5 77.0833C87.5 82.8375 82.8375 87.5 77.0833 87.5H22.9167C17.1646 87.5 12.5 82.8375 12.5 77.0833V22.9167C12.5 17.1625 17.1646 12.5 22.9167 12.5H77.0833C82.8375 12.5 87.5 17.1625 87.5 22.9167V77.0833Z"
-                    fill="#2563eb"></path>
-                    <path opacity="0.05"
-                    d="M62.4998 77.0834V56.0438C62.4998 52.5251 60.7936 50.423 57.9332 50.423C56.2353 50.423 54.9873 51.3792 54.2269 53.2647C54.1915 53.398 54.1415 53.9417 54.1623 55.5855L54.1665 77.0834H39.5832V37.5001H54.1665V39.7105C56.2957 38.2417 58.9061 37.5001 61.954 37.5001C71.4269 37.5001 77.0811 43.9438 77.0811 54.7376L77.0832 77.0834H62.4998ZM22.9165 77.0834V37.5001H30.1186C25.9457 37.5001 22.9165 34.4334 22.9165 30.2063C22.9165 25.9834 25.9957 22.9167 30.2373 22.9167C34.429 22.9167 37.4144 25.898 37.4998 30.1647C37.4998 34.423 34.4186 37.5001 30.1769 37.5001H37.4998V77.0834H22.9165Z"
-                    fill="black"></path>
-                    <path opacity="0.07"
-                    d="M63.5418 76.0416V56.0437C63.5418 51.9332 61.3939 49.3812 57.9335 49.3812C55.2356 49.3812 53.9022 51.2812 53.2606 52.8749C53.0897 53.2895 53.1127 54.9353 53.121 55.6374L53.1252 76.0416H40.6252V38.5416H53.1252V41.9541C54.7814 40.2395 57.4481 38.5416 61.9543 38.5416C70.7731 38.5416 76.0397 44.5958 76.0397 54.7374L76.0418 76.0416H63.5418ZM23.9585 76.0416V38.5416H36.4585V76.0416H23.9585ZM30.1189 36.4583C26.5502 36.4583 23.9585 33.8291 23.9585 30.2062C23.9585 26.5853 26.6002 23.9583 30.2377 23.9583C33.8293 23.9583 36.3856 26.5187 36.4585 30.1853C36.4585 33.8291 33.8168 36.4583 30.1772 36.4583H30.1189Z"
-                    fill="black"></path>
-                    <path
-                    d="M25 39.5833H35.4167V75H25V39.5833ZM30.1771 35.4167H30.1187C27.0104 35.4167 25 33.1 25 30.2062C25 27.25 27.0729 25 30.2375 25C33.4062 25 35.3583 27.25 35.4167 30.2062C35.4167 33.0979 33.4062 35.4167 30.1771 35.4167ZM75 75H64.5833V56.0437C64.5833 51.4646 62.0312 48.3396 57.9333 48.3396C54.8062 48.3396 53.1146 50.4479 52.2937 52.4854C51.9937 53.2146 52.0833 55.2312 52.0833 56.25V75H41.6667V39.5833H52.0833V45.0333C53.5854 42.7083 55.9375 39.5833 61.9542 39.5833C69.4083 39.5833 74.9979 44.2708 74.9979 54.7375L75 75Z"
-                    fill="white"></path>
-                </svg>
-                <h3 class="text-base capitalize  font-black text-[#2563eb]  sm:text-[28px]">linkedin</h3>
-                <p class="text-sm text-center font-regular text-[#A4A4A5] sm:text-xl  ">@snnajieze</p>
-                </div>
-                </a>
-
-                <a target="_blank" href="https://x.com/snnajieze">
-                    <div
-                        class="w-[100px] hover:scale-[1.1] h-[125px] sm:w-[200px] sm:h-[225px] gap-1 md:gap-4 flex flex-col px-2 py-3 justify-center items-center bg-white bg-opacity-30 rounded-[25px]">
-
-                        <!-- X (Twitter) Icon -->
-                        <svg
-                        aria-hidden="true"
-                        class="icon w-[64px] sm:w-[100px] h-[64px] sm:h-[100px]"
-                        viewBox="0 0 24 24"
-                        fill="white"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M18.244 2H21.556L14.326 10.26L22.826 22H16.172L10.966 14.89L4.76 22H1.444L9.18 13.12L1 2H7.826L12.536 8.354L18.244 2ZM17.082 20H18.916L6.828 4H4.86L17.082 20Z"
-                            fill="#2563eb"></path>
-                        </svg>
-
-                        <h3 class="text-base capitalize font-black text-[#2563eb]  sm:text-[28px]">
-                        x (twitter)
-                        </h3>
-
-                        <p class="text-sm text-center font-regular text-[#A4A4A5] sm:text-xl">
-                        @snnajieze
-                        </p>
+        <!-- Hero Section -->
+        <section id="hero" class="pt-32 pb-20 px-6 min-h-screen flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-50 dark:from-blue-950/20 to-transparent -z-10"></div>
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-8">
+                    <div class="w-32 h-32 mx-auto mb-8 rounded-full border-2 border-blue-600 dark:border-blue-400 overflow-hidden">
+                        <img src="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}" alt="Solomon Nnajieze" class="w-full h-full object-cover">
                     </div>
-                </a>
-
-
-                <a target="_blank" href="https://wa.me/2348108938172">
-                <div
-                class="w-[100px] hover:scale-[1.1] h-[125px] sm:w-[200px] sm:h-[225px] gap-1 md:gap-4 flex flex-col  px-2 py-3 justify-center items-center bg-white  bg-opacity-30 rounded-[25px]">
-                <svg aria-hidden="true" class="icon w-[64px] sm:w-[100px] h-[64px] sm:h-[100px]" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" id="whatsapp">
-                    <path
-                    d="M10.1416 90.2147L15.7541 69.7251C12.2916 63.7292 10.4708 56.9251 10.4729 49.9563C10.4833 28.1542 28.2249 10.4167 50.0291 10.4167C60.6103 10.4209 70.5395 14.5397 78.0083 22.0126C85.4749 29.4876 89.5874 39.4209 89.5833 49.9876C89.5749 71.7897 71.8291 89.5292 50.0291 89.5292H50.0124C43.3937 89.5272 36.8874 87.8667 31.1103 84.7147L10.1416 90.2147Z"
-                    fill="white"></path>
-                    <path
-                    d="M10.1418 91.2562C9.86683 91.2562 9.60016 91.1479 9.40225 90.9479C9.14183 90.6833 9.03975 90.2979 9.13766 89.9417L14.6356 69.8667C11.2272 63.8125 9.42933 56.9375 9.4335 49.9583C9.44183 27.5792 27.6522 9.375 50.0293 9.375C60.8835 9.37917 71.0814 13.6063 78.746 21.2771C86.4106 28.95 90.6293 39.1458 90.6252 49.9875C90.6168 72.3646 72.4043 90.5708 50.0293 90.5708C43.3856 90.5687 36.8127 88.9292 30.9793 85.8271L10.4064 91.2208C10.3189 91.2458 10.2314 91.2562 10.1418 91.2562Z"
-                    fill="white"></path>
-                    <path
-                    d="M50.0293 10.4166C60.6106 10.4208 70.5397 14.5395 78.0085 22.0124C85.4751 29.4874 89.5876 39.4207 89.5835 49.9874C89.5751 71.7895 71.8293 89.5291 50.0293 89.5291H50.0126C43.3939 89.527 36.8876 87.8666 31.1106 84.7145L10.1418 90.2145L15.7543 69.7249C12.2918 63.7291 10.471 56.9249 10.4731 49.9562C10.4835 28.1541 28.2251 10.4166 50.0293 10.4166ZM50.0293 8.33325C27.0793 8.33325 8.40014 27.0041 8.38972 49.9562C8.38764 56.9708 10.1585 63.8833 13.5168 70.002L8.13139 89.6666C7.93556 90.3853 8.13556 91.152 8.66056 91.6812C9.05639 92.0812 9.59181 92.2999 10.1418 92.2999C10.3189 92.2999 10.496 92.277 10.671 92.2312L30.8522 86.9395C36.7439 89.9978 43.3481 91.6124 50.0126 91.6145C72.9793 91.6145 91.6585 72.9416 91.6689 49.9895C91.6731 38.8666 87.346 28.4083 79.4856 20.5416C71.621 12.6728 61.1606 8.33742 50.0293 8.33325Z"
-                    fill="#CFD8DC"></path>
-                    <path
-                    d="M73.1333 27.1375C66.925 20.925 58.6729 17.5021 49.8896 17.5C31.7562 17.5 17.0083 32.2417 17 50.3625C16.9979 56.5729 18.7354 62.6187 22.0271 67.8542L22.8104 69.0979L19.4875 81.225L31.9313 77.9625L33.1333 78.675C38.1792 81.6708 43.9667 83.2542 49.8667 83.2562H49.8792C68 83.2562 82.7479 68.5125 82.7542 50.3896C82.7562 41.6083 79.3417 33.35 73.1333 27.1375Z"
-                    fill="#2563eb"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M40.1418 33.4271C39.4022 31.7813 38.6231 31.7479 37.9168 31.7188C37.3397 31.6938 36.6814 31.6958 36.0231 31.6958C35.3647 31.6958 34.2939 31.9438 33.3877 32.9333C32.4814 33.9229 29.9272 36.3125 29.9272 41.175C29.9272 46.0375 33.4689 50.7375 33.9627 51.3958C34.4564 52.0542 40.8002 62.3521 50.846 66.3146C59.1939 69.6063 60.8939 68.9521 62.7064 68.7875C64.5189 68.6229 68.5543 66.3979 69.3772 64.0896C70.2002 61.7813 70.2002 59.8042 69.9543 59.3917C69.7064 58.9792 69.0481 58.7333 68.0606 58.2375C67.0731 57.7417 62.2127 55.3521 61.3064 55.0229C60.4002 54.6938 59.7418 54.5292 59.0814 55.5188C58.4231 56.5063 56.5293 58.7333 55.9522 59.3917C55.3752 60.0521 54.7981 60.1354 53.8106 59.6396C52.8231 59.1438 49.6397 58.1021 45.8627 54.7354C42.9252 52.1167 40.9418 48.8813 40.3647 47.8917C39.7877 46.9042 40.3022 46.3688 40.7981 45.875C41.2418 45.4313 41.7856 44.7208 42.2814 44.1438C42.7752 43.5667 42.9397 43.1542 43.2689 42.4958C43.5981 41.8354 43.4335 41.2583 43.1856 40.7646C42.9418 40.2688 41.021 35.3813 40.1418 33.4271Z"
-                    fill="white"></path>
-                </svg>
-                <h3 class="text-base capitalize  font-black text-[#2563eb]  sm:text-[28px]">whatsapp</h3>
-                <p class="text-sm text-center font-regular text-[#A4A4A5] sm:text-xl  ">Send Message</p>
                 </div>
-                </a>
-
-                
-                <a target="_blank" href="https://medium.com/@snnajieze">
-                    <div
-                        class="w-[100px] hover:scale-[1.1] h-[125px] sm:w-[200px] sm:h-[225px] gap-1 md:gap-4 flex flex-col px-2 py-3 justify-center items-center bg-white bg-opacity-30 rounded-[25px]">
-
-                        <!-- Medium Icon -->
-                        <svg
-                        aria-hidden="true"
-                        class="icon w-[64px] sm:w-[100px] h-[64px] sm:h-[100px]"
-                        viewBox="0 0 24 24"
-                        fill="white"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.37 7.5a1.5 1.5 0 0 0-.55-1.25L2 4.25V4h6.47l5 10.97L18.06 4H24v.25l-1.6 1.53a.75.75 0 0 0-.29.73v11a.75.75 0 0 0 .29.73L24 19.75V20h-8.05v-.25l1.66-1.6c.16-.16.16-.2.16-.73V8.53L13.1 20h-.63L7.25 8.53v7.43a1.7 1.7 0 0 0 .47 1.41L9.9 19.75V20H4v-.25l2.18-2.38a1.65 1.65 0 0 0 .42-1.41z" fill="#2563eb"></path>
-                        </svg>
-
-                        <h3 class="text-base capitalize font-black text-[#2563eb]  sm:text-[28px]">
-                        medium
-                        </h3>
-
-                        <p class="text-sm text-center font-regular text-[#A4A4A5] sm:text-xl">
-                        @snnajieze
-                        </p>
-                    </div>
-                </a>
-
-
-                
-                
-                <a target="_blank" href="mailto:snnajieze@gmail.com">
-                <div
-                class="w-[100px] hover:scale-[1.1] h-[125px] sm:w-[200px] sm:h-[225px] gap-1 md:gap-4 flex flex-col  px-2 py-3 justify-center items-center bg-white  bg-opacity-30 rounded-[25px]">
-                <svg aria-hidden="true" class="icon w-[64px] sm:w-[100px] h-[64px] sm:h-[100px]" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" id="email">
-                    <path
-                    d="M83.2187 83.125H16.2812C12.7601 83.1209 9.38438 81.7203 6.89456 79.2304C4.40473 76.7406 3.00414 73.3649 3 69.8437V29.7812C3.00414 26.2601 4.40473 22.8844 6.89456 20.3946C9.38438 17.9047 12.7601 16.5041 16.2812 16.5H83.2187C86.7399 16.5041 90.1156 17.9047 92.6055 20.3946C95.0953 22.8844 96.4959 26.2601 96.5 29.7812V69.8437C96.4959 73.3649 95.0953 76.7406 92.6055 79.2304C90.1156 81.7203 86.7399 83.1209 83.2187 83.125ZM16.2812 21.1875C14.002 21.1875 11.8162 22.0929 10.2046 23.7046C8.59291 25.3162 7.6875 27.502 7.6875 29.7812V69.8437C7.6875 72.123 8.59291 74.3088 10.2046 75.9204C11.8162 77.5321 14.002 78.4375 16.2812 78.4375H83.2187C85.4979 78.4375 87.6838 77.5321 89.2954 75.9204C90.9071 74.3088 91.8125 72.123 91.8125 69.8437V29.7812C91.8125 27.502 90.9071 25.3162 89.2954 23.7046C87.6838 22.0929 85.4979 21.1875 83.2187 21.1875H16.2812Z"
-                    fill="#2563eb"></path>
-                    <path
-                    d="M49.9998 59.5C47.1085 59.5045 44.2945 58.5665 41.9842 56.8281L5.49978 29.2343C5.242 29.0534 5.02333 28.8224 4.85682 28.5551C4.69031 28.2878 4.57938 27.9897 4.53066 27.6785C4.48194 27.3674 4.49642 27.0496 4.57324 26.7442C4.65006 26.4388 4.78765 26.152 4.97778 25.9009C5.16791 25.6499 5.40669 25.4397 5.67985 25.283C5.95302 25.1263 6.25497 25.0262 6.56767 24.9888C6.88036 24.9514 7.1974 24.9773 7.49983 25.0652C7.80227 25.153 8.0839 25.3009 8.32791 25.5L44.8123 53.125C46.3105 54.2434 48.1301 54.8476 49.9998 54.8476C51.8694 54.8476 53.689 54.2434 55.1873 53.125L91.6716 25.5C91.9157 25.3009 92.1973 25.153 92.4997 25.0652C92.8022 24.9773 93.1192 24.9514 93.4319 24.9888C93.7446 25.0262 94.0465 25.1263 94.3197 25.283C94.5929 25.4397 94.8316 25.6499 95.0218 25.9009C95.2119 26.152 95.3495 26.4388 95.4263 26.7442C95.5031 27.0496 95.5176 27.3674 95.4689 27.6785C95.4202 27.9897 95.3092 28.2878 95.1427 28.5551C94.9762 28.8224 94.7576 29.0534 94.4998 29.2343L58.0154 56.8281C55.7051 58.5665 52.8911 59.5045 49.9998 59.5Z"
-                    fill="#2563eb"></path>
-                    <path
-                    d="M6.51565 76.7813C6.0403 76.782 5.57597 76.6382 5.18427 76.3689C4.79258 76.0995 4.49204 75.7175 4.32253 75.2734C4.15303 74.8292 4.12257 74.3441 4.2352 73.8823C4.34783 73.4205 4.59822 73.0038 4.95315 72.6876L33.7032 47.047C34.1673 46.6326 34.777 46.4195 35.3982 46.4547C36.0194 46.4898 36.6013 46.7703 37.0157 47.2345C37.4301 47.6986 37.6431 48.3083 37.6079 48.9296C37.5728 49.5508 37.2923 50.1326 36.8282 50.547L8.07815 76.1876C7.6512 76.5761 7.09285 76.7882 6.51565 76.7813ZM93.4844 76.7813C92.9072 76.7882 92.3489 76.5761 91.9219 76.1876L63.1719 50.547C62.7078 50.1326 62.4273 49.5508 62.3921 48.9296C62.3569 48.3083 62.57 47.6986 62.9844 47.2345C63.3988 46.7703 63.9806 46.4898 64.6018 46.4547C65.223 46.4195 65.8328 46.6326 66.2969 47.047L95.0313 72.6876C95.3862 73.0038 95.6366 73.4205 95.7492 73.8823C95.8619 74.3441 95.8314 74.8292 95.6619 75.2734C95.4924 75.7175 95.1919 76.0995 94.8002 76.3689C94.4085 76.6382 93.9441 76.782 93.4688 76.7813H93.4844Z"
-                    fill="#2563eb"></path>
-                </svg>
-                <h3 class="text-base capitalize  font-black text-[#2563eb]  sm:text-[28px]">email</h3>
-                <p class="text-sm text-center font-regular text-[#A4A4A5] sm:text-xl  ">Email me</p>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Software & DevOps Engineer</h1>
+                <p class="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    Building reliable, scalable systems with Laravel, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams ship faster.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="#projects" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors inline-block">View Projects</a>
+                    <a href="#contact" class="px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-950 rounded-lg transition-colors inline-block">Get In Touch</a>
                 </div>
-                </a>
             </div>
         </section>
 
-        @if (Route::has('login'))
-            <div class="h-14.5 hidden lg:block"></div>
-        @endif
+        <!-- About Section -->
+        <section id="about" class="py-20 px-6 bg-zinc-50 dark:bg-zinc-900/50">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12">About Me</h2>
+                <div class="space-y-6 text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                    <p>I'm a Software Engineer who evolved into DevOps and Platform Engineering. Starting with PHP and Laravel, I've spent the last 7 years building, deploying, and scaling web applications in production environments.</p>
+                    <p>My journey took me from pure backend development to owning systems end-to-end—application code, infrastructure, CI/CD pipelines, and operational reliability. I've worked with teams at SAMBA-DATA R&D, SwitchCoins Global, BFA Digital Tech, and various startups, handling everything from architecting REST APIs to managing cloud deployments on AWS and DigitalOcean.</p>
+                    <p>What drives me: reducing operational friction, automating repetitive tasks, writing clear documentation, and helping teams move faster with confidence. I believe great engineering is invisible—it just works.</p>
+                    <p>When I'm not coding, I'm writing technical guides, mentoring junior developers, or exploring new infrastructure tooling. I'm open to remote-first roles with teams focused on reliability, automation, and real-world impact.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12">Skills & Expertise</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-xl font-bold mb-6 text-blue-600 dark:text-blue-400">Backend & Web Development</h3>
+                        <ul class="space-y-3 text-zinc-700 dark:text-zinc-300">
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> PHP 8+ & Laravel (latest stable)</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> REST APIs & API Design</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> MySQL, PostgreSQL</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Blade Templates & Livewire</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Tailwind CSS & Frontend Tooling</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Git & Version Control</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Performance Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-xl font-bold mb-6 text-blue-600 dark:text-blue-400">DevOps & Cloud Infrastructure</h3>
+                        <ul class="space-y-3 text-zinc-700 dark:text-zinc-300">
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> AWS (EC2, RDS, S3, CloudFront)</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> DigitalOcean & App Platform</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Docker & Container Orchestration</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> CI/CD with GitHub Actions</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Linux (Nginx, Apache, systemd)</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Monitoring & Observability</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Infrastructure as Code</li>
+                        </ul>
+                    </div>
+                    <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-xl font-bold mb-6 text-blue-600 dark:text-blue-400">Professional Practices</h3>
+                        <ul class="space-y-3 text-zinc-700 dark:text-zinc-300">
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Automation-first mindset</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Clear documentation & knowledge sharing</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Remote collaboration & communication</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Code review & mentorship</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Problem-solving & troubleshooting</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Technical writing</li>
+                        </ul>
+                    </div>
+                    <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-xl font-bold mb-6 text-blue-600 dark:text-blue-400">Specializations</h3>
+                        <ul class="space-y-3 text-zinc-700 dark:text-zinc-300">
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Full-stack web applications</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Production deployments & DevOps</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> System reliability & scaling</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> SaaS platform architecture</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Real-time systems & APIs</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Cloud cost optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-6 bg-zinc-50 dark:bg-zinc-900/50">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12">Featured Projects</h2>
+                <div class="space-y-8">
+                    <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-2xl font-bold mb-3"><a href="https://c4csignals.com" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">c4csignals.com</a></h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">Personally built trading signals platform</p>
+                        <div class="space-y-3 mb-4 text-zinc-700 dark:text-zinc-300">
+                            <p><strong>Problem:</strong> Need for a reliable, real-time trading signal delivery platform with high availability requirements.</p>
+                            <p><strong>Solution:</strong> Built full-stack Laravel application with real-time signal processing, multiple payment integrations, and cloud deployment on DigitalOcean.</p>
+                            <p><strong>Impact:</strong> Production system serving thousands of users with 99.9% uptime, handling high-frequency data processing.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">Laravel</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">DigitalOcean</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">Real-time APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-2xl font-bold mb-3">XWhyMobile</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">Android app for local data & airtime purchases</p>
+                        <div class="space-y-3 mb-4 text-zinc-700 dark:text-zinc-300">
+                            <p><strong>Problem:</strong> Users needed seamless way to purchase mobile data and airtime with local payment methods.</p>
+                            <p><strong>Solution:</strong> Architected backend REST APIs with PHP and MySQL, integrated with Android app using Java and jQueryMobile UI. Handled payment processing and transaction reconciliation.</p>
+                            <p><strong>Impact:</strong> Learned mobile app integration, payment systems, and user experience across platforms.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-zinc-700 dark:text-green-300 rounded-full text-sm">PHP</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-zinc-700 dark:text-green-300 rounded-full text-sm">MySQL</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-zinc-700 dark:text-green-300 rounded-full text-sm">Android</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-zinc-700 dark:text-green-300 rounded-full text-sm">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-2xl font-bold mb-3">SwitchCoins Global - Platform Infrastructure</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">High-availability cryptocurrency exchange platform</p>
+                        <div class="space-y-3 mb-4 text-zinc-700 dark:text-zinc-300">
+                            <p><strong>Problem:</strong> Needed reliable infrastructure for production crypto trading platform with strict uptime requirements.</p>
+                            <p><strong>Solution:</strong> Implemented CI/CD pipelines using GitHub Actions, automated server deployments on AWS and DigitalOcean, set up monitoring and alerting, managed database backups and disaster recovery.</p>
+                            <p><strong>Impact:</strong> Reduced deployment time by 60%, improved system reliability to 99.95% uptime, enabled rapid feature releases.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-zinc-700 dark:text-purple-300 rounded-full text-sm">AWS</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-zinc-700 dark:text-purple-300 rounded-full text-sm">DevOps</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-zinc-700 dark:text-purple-300 rounded-full text-sm">CI/CD</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-zinc-700 dark:text-purple-300 rounded-full text-sm">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12">Experience Timeline</h2>
+                <div class="space-y-8">
+                    <div class="border-l-2 border-blue-600 pl-8 relative">
+                        <div class="absolute -left-4 w-6 h-6 rounded-full bg-blue-600"></div>
+                        <h3 class="text-xl font-bold">DevOps Engineer</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">SAMBA-DATA R&D.</p>
+                        <p class="text-sm text-zinc-500 dark:text-zinc-500 mb-3">2025 - present</p>
+                        <ul class="space-y-2 text-zinc-700 dark:text-zinc-300">
+                            <li>• Implemented CI/CD pipelines to automate testing and deployment processes, improving delivery speed and reliability</li>
+                            <li>• Deployed and managed applications on AWS cloud infrastructure, ensuring high availability and security</li>
+                            <li>• Containerized applications using Docker for consistent development and production environments</li>
+                            <li>• Monitored system performance, optimized server resources, and resolved production issues proactively</li>
+                            <li>• Collaborated with cross-functional teams to deliver business-focused, production-ready solutions</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-l-2 border-blue-600 pl-8 relative">
+                        <div class="absolute -left-4 w-6 h-6 rounded-full bg-blue-600"></div>
+                        <h3 class="text-xl font-bold">Full Stack Developer & DevOps Support</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">SwitchCoins Global Ltd.</p>
+                        <p class="text-sm text-zinc-500 dark:text-zinc-500 mb-3">2021 - 2022</p>
+                        <ul class="space-y-2 text-zinc-700 dark:text-zinc-300">
+                            <li>• Developed and maintained high-availability cryptocurrency exchange platform</li>
+                            <li>• Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                            <li>• Managed cloud infrastructure on AWS and DigitalOcean</li>
+                            <li>• Set up monitoring, logging, and observability systems</li>
+                            <li>• Mentored junior developers and conducted code reviews</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-l-2 border-blue-600 pl-8 relative">
+                        <div class="absolute -left-4 w-6 h-6 rounded-full bg-blue-600"></div>
+                        <h3 class="text-xl font-bold">Full Stack Developer & Technical Trainer</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">BFA Digital Tech</p>
+                        <p class="text-sm text-zinc-500 dark:text-zinc-500 mb-3">2019 - 2021</p>
+                        <ul class="space-y-2 text-zinc-700 dark:text-zinc-300">
+                            <li>• Built multiple Laravel-based web applications from scratch</li>
+                            <li>• Designed and implemented REST APIs</li>
+                            <li>• Trained junior developers in PHP, Laravel, and web development best practices</li>
+                            <li>• Deployed applications to production servers</li>
+                            <li>• Wrote technical documentation and guides</li>
+                        </ul>
+                    </div>
+
+                    <div class="border-l-2 border-blue-600 pl-8 relative">
+                        <div class="absolute -left-4 w-6 h-6 rounded-full bg-blue-600"></div>
+                        <h3 class="text-xl font-bold">Junior Web Developer & Network Admin</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400">Vision Data Techs</p>
+                        <p class="text-sm text-zinc-500 dark:text-zinc-500 mb-3">2015 - 2019</p>
+                        <ul class="space-y-2 text-zinc-700 dark:text-zinc-300">
+                            <li>• Developed PHP web applications</li>
+                            <li>• Managed company network infrastructure</li>
+                            <li>• Provided technical support and maintenance</li>
+                            <li>• Learned foundational web development and system administration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Writing Section -->
+        <section id="writing" class="py-20 px-6 bg-zinc-50 dark:bg-zinc-900/50">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12">Technical Writing & Communication</h2>
+                <p class="text-lg text-zinc-700 dark:text-zinc-300 mb-12 leading-relaxed">
+                    I believe great engineering requires clear communication. I write technical guides, blog articles, and documentation to help others learn and solve problems faster.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <a href="https://dev.to/snnajieze/cicd-is-not-only-for-the-cloud-building-a-cicd-pipeline-for-shared-hosting-using-github-actions-4c4h" target="_blank" class="block">
+                    <div class="p-6 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-lg font-bold mb-2">CI/CD Is Not Only for the Cloud</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">Exploring CI/CD principles and how they apply to various deployment scenarios.</p>
+                    </div>
+                    </a>
+
+                    <a href="https://medium.com/@snnajieze/nativephp-a-look-at-what-it-is-the-features-it-has-to-offer-and-why-it-is-a-game-changer-9c0bbb8222d4" target="_blank" class="block">
+                    <div class="p-6 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-lg font-bold mb-2">NativePHP: A Look at What It Is</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">Exploring NativePHP and its potential for building desktop applications with PHP.</p>
+                    </div>
+                    </a>
+
+                    <a href="https://snnajieze.hashnode.dev/10-key-features-of-laravel" target="_blank" class="block">
+                    <div class="p-6 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-lg font-bold mb-2">10 Key Features of Laravel</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">Deep dive into Laravel's powerful features that make it my framework of choice.</p>
+                    </div>
+                    </a>
+                </div>
+                <div class="p-8 bg-white dark:bg-zinc-800 rounded-lg border border-blue-600 dark:border-blue-400">
+                    <p class="text-zinc-700 dark:text-zinc-300 mb-4">
+                        Writing on  <a href="https://medium.com/@snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Medium</a>, <a href="https://hashnode.com/@snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Hashnode</a>, and <a href="https://dev.to/snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Dev.to</a> — follow for weekly posts on DevOps, Laravel, and cloud infrastructure.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-6">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12 text-center">Let's Work Together</h2>
+                <p class="text-center text-lg text-zinc-600 dark:text-zinc-400 mb-12 leading-relaxed">
+                    I'm open to remote-first opportunities with any company that values reliability and scalability. Let's build something reliable and scalable.
+                </p>
+                
+                @livewire('contact-form')
+
+                <!-- Quick Links -->
+                <div class="mt-16 border-t border-zinc-200 dark:border-zinc-800 py-12">
+                    <p class="text-center text-zinc-600 dark:text-zinc-400 mb-8">Or reach out directly:</p>
+                    <div class="flex flex-col md:flex-row gap-6 justify-center flex-wrap">
+                        <a href="mailto:snnajieze@gmail.com" class="flex items-center justify-center gap-3 px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            Email
+                        </a>
+                        <a href="https://linkedin.com/in/snnajieze" target="_blank" class="flex items-center justify-center gap-3 px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/snnajieze" target="_blank" class="flex items-center justify-center gap-3 px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+                            GitHub
+                        </a>
+                        <a href="https://x.com/snnajieze" target="_blank" class="flex items-center justify-center gap-3 px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.73-8.835L2.577 2.25h6.79l4.605 6.09L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"></path></svg>
+                            X
+                        </a>
+                        <a href="https://wa.me/2348108938172" target="_blank" class="flex items-center justify-center gap-3 px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                            <svg
+                                class="w-5 h-5"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                >
+                                <path
+                                    d="M12.04 2C6.58 2 2.16 6.42 2.16 11.88c0 1.96.52 3.85 1.52 5.52L2 22l4.78-1.62a9.83 9.83 0 005.26 1.52h.01c5.46 0 9.88-4.42 9.88-9.88C21.93 6.42 17.5 2 12.04 2zm5.73 14.27c-.24.68-1.38 1.31-1.9 1.38-.5.07-1.13.1-1.83-.12-.42-.13-.96-.31-1.66-.61-2.92-1.26-4.83-4.23-4.98-4.43-.15-.2-1.18-1.57-1.18-3 0-1.43.75-2.14 1.02-2.43.27-.29.6-.36.8-.36h.58c.18 0 .42-.07.66.5.24.57.82 2 .9 2.15.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.17-.32.38-.46.51-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.36 1.45.3.15.48.13.66-.08.18-.2.76-.88.96-1.18.2-.3.4-.25.66-.15.27.1 1.7.8 2 1 .3.2.5.3.57.46.07.16.07.93-.17 1.61z"
+                                />
+                                </svg>
+
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-zinc-100 dark:bg-zinc-900 py-12 px-6 text-center text-zinc-600 dark:text-zinc-400">
+            <p>&copy; {{ date('Y') }} Solomon Nnajieze. Built with Laravel & Tailwind CSS.</p>
+        </footer>
+
+        <script>
+            // Theme Toggle
+            const themeToggle = document.getElementById('themeToggle');
+            const html = document.getElementById('html');
+            
+            // Check for saved theme preference or default to light
+            const theme = localStorage.getItem('theme') || 'light';
+            if (theme === 'dark') {
+                html.classList.add('dark');
+            }
+            
+            themeToggle.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                const newTheme = html.classList.contains('dark') ? 'dark' : 'light';
+                localStorage.setItem('theme', newTheme);
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            const closeIcon = document.getElementById('closeIcon');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
