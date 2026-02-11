@@ -196,6 +196,18 @@
                 @media (min-width: 48rem) { .md\:flex { display: flex; } .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .md\:gap-8 { gap: 2rem; } .md\:flex-row { flex-direction: row; } }
             </style>
         @endif
+
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BR8109NGMM"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BR8109NGMM');
+        </script>
+        
     </head>
     <body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 transition-colors">
         <!-- Navigation -->
