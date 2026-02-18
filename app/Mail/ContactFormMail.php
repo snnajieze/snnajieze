@@ -28,12 +28,12 @@ class ContactFormMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.contact-form',
+            markdown: 'emails.contact-form',
             with: [
                 'name' => $this->data['name'],
                 'email' => $this->data['email'],
                 'subject' => $this->data['subject'],
-                'message' => $this->data['message'],
+                'userMessage' => $this->data['userMessage'],
             ],
         );
     }

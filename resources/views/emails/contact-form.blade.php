@@ -13,7 +13,7 @@ A visitor has submitted a message through your portfolio contact form.
 
 ## Message:
 
-{{ $message }}
+{{ $userMessage }}
 
 ---
 

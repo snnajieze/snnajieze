@@ -66,12 +66,12 @@
             <label for="message" class="block text-sm font-bold mb-2">Message</label>
             <textarea 
                 id="message" 
-                wire:model="message"
+                wire:model="userMessage"
                 placeholder="Tell me about your project or inquiry..."
                 rows="5"
                 class="w-full px-4 py-3 border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 rounded-lg focus:outline-none focus:border-blue-600 dark:focus:border-blue-400 resize-none"
             ></textarea>
-            @error('message')
+            @error('userMessage')
                 <span class="text-red-600 dark:text-red-400 text-sm mt-1 block">{{ $message }}</span>
             @enderror
         </div>

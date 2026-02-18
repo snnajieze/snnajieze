@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 use App\Mail\ContactFormMail;
 
 class ContactForm extends Component
@@ -11,7 +12,7 @@ class ContactForm extends Component
     public $name = '';
     public $email = '';
     public $subject = '';
-    public $message = '';
+    public $userMessage = '';
     public $submitted = false;
     public $errorMessage = '';
 
@@ -19,7 +20,7 @@ class ContactForm extends Component
         'name' => 'required|string|min:2|max:100',
         'email' => 'required|email',
         'subject' => 'required|string|min:5|max:200',
-        'message' => 'required|string|min:10|max:2000',
+        'userMessage' => 'required|string|min:10|max:2000',
     ];
 
     public function submit()
@@ -35,7 +36,7 @@ class ContactForm extends Component
             $this->name = '';
             $this->email = '';
             $this->subject = '';
-            $this->message = '';
+            $this->userMessage = '';
             $this->submitted = true;
             $this->errorMessage = '';
 
@@ -43,6 +44,7 @@ class ContactForm extends Component
             $this->dispatch('hideSuccess');
         } catch (\Exception $e) {
             $this->errorMessage = 'Failed to send message. Please try again.';
+            Log::error('Contact form submission failed', ['exception' => $e]);
         }
     }
 
