@@ -458,6 +458,14 @@
                     I believe great engineering requires clear communication. I write technical guides, blog articles, and documentation to help others learn and solve problems faster.
                 </p>
                 <div class="grid md:grid-cols-2 gap-8 mb-12">
+
+                    <a href="https://medium.com/@snnajieze/essential-ai-automation-tools-for-modern-professionals-cd81d2bb473f" target="_blank" class="block">
+                    <div class="p-6 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-lg font-bold mb-2">AI & Automation Tools for Professionals</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">AI and automation tools that can help modern professionals be more productive and efficient.</p>
+                    </div>
+                    </a>
+
                     <a href="https://dev.to/snnajieze/cicd-is-not-only-for-the-cloud-building-a-cicd-pipeline-for-shared-hosting-using-github-actions-4c4h" target="_blank" class="block">
                     <div class="p-6 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
                         <h3 class="text-lg font-bold mb-2">CI/CD Is Not Only for the Cloud</h3>
@@ -468,7 +476,7 @@
                     <a href="https://medium.com/@snnajieze/nativephp-a-look-at-what-it-is-the-features-it-has-to-offer-and-why-it-is-a-game-changer-9c0bbb8222d4" target="_blank" class="block">
                     <div class="p-6 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
                         <h3 class="text-lg font-bold mb-2">NativePHP: A Look at What It Is</h3>
-                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">Exploring NativePHP and its potential for building desktop applications with PHP.</p>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">NativePHP and its potential for building desktop applications with PHP.</p>
                     </div>
                     </a>
 
@@ -481,7 +489,7 @@
                 </div>
                 <div class="p-8 bg-white dark:bg-zinc-800 rounded-lg border border-blue-600 dark:border-blue-400">
                     <p class="text-zinc-700 dark:text-zinc-300 mb-4">
-                        Writing on  <a href="https://medium.com/@snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Medium</a>, <a href="https://hashnode.com/@snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Hashnode</a>, and <a href="https://dev.to/snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Dev.to</a> — follow for weekly posts on DevOps, Laravel, and cloud infrastructure.
+                        Writing on  <a href="https://medium.com/@snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Medium</a>, <a href="https://hashnode.com/@snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Hashnode</a>, and <a href="https://dev.to/snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Dev.to</a> — follow me for weekly posts on AI, DevOps, Laravel, and cloud infrastructure.
                     </p>
                 </div>
             </div>
