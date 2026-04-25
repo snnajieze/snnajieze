@@ -5,31 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Basic Meta Tags -->
-        <meta name="description" content="Software & DevOps Engineer. 7+ years building reliable, scalable systems with Laravel, AWS, and cloud infrastructure. Open to remote roles.">
+        <meta name="description" content="AI Automation Specialist, Cloud Engineer, Software Engineer. 7+ years building reliable, scalable systems with Laravel, AWS, and cloud infrastructure. Open to remote roles.">
         <meta name="author" content="Solomon Nnajieze">
-        <meta name="keywords" content="Laravel, DevOps, Full Stack Developer, PHP, AWS, Cloud Infrastructure, CI/CD, Backend Engineer, Nigeria">
+        <meta name="keywords" content="AI Automation, Laravel, DevOps, Full Stack Developer, PHP, AWS, Cloud Infrastructure, CI/CD, Backend Engineer, Nigeria">
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
         <meta name="language" content="English">
         <meta name="revisit-after" content="7 days">
         
         <!-- Open Graph Tags for Social Media Preview -->
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Solomon Nnajieze | Software & DevOps Engineer">
-        <meta property="og:description" content="Software & DevOps Engineer. 7+ years building reliable, scalable systems with Laravel, AWS, and cloud infrastructure.">
+        <meta property="og:title" content="Solomon Nnajieze | AI Automation Specialist, Cloud Engineer, Software Engineer">
+        <meta property="og:description" content="AI Automation Specialist, Cloud Engineer, Software Engineer. 7+ years building reliable, scalable systems with Laravel, AWS, and cloud infrastructure.">
         <meta property="og:image" content="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
-        <meta property="og:image:alt" content="Solomon Nnajieze - Software & DevOps Engineer">
+        <meta property="og:image:alt" content="Solomon Nnajieze - AI Automation Specialist, Cloud Engineer, Software Engineer">
         <meta property="og:url" content="{{ config('app.url') }}">
         <meta property="og:site_name" content="Solomon Nnajieze">
         <meta property="og:locale" content="en_US">
         
         <!-- Twitter Card Tags -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Solomon Nnajieze | Software & DevOps Engineer">
-        <meta name="twitter:description" content="Software & DevOps Engineer. 7+ years building reliable, scalable systems with Laravel, AWS, and cloud infrastructure.">
+        <meta name="twitter:title" content="Solomon Nnajieze | AI Automation Specialist, Cloud Engineer, Software Engineer">
+        <meta name="twitter:description" content="AI Automation Specialist, Cloud Engineer, Software Engineer. 7+ years building reliable, scalable systems with Laravel, AWS, and cloud infrastructure.">
         <meta name="twitter:image" content="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}">
-        <meta name="twitter:image:alt" content="Solomon Nnajieze - Software & DevOps Engineer">
+        <meta name="twitter:image:alt" content="Solomon Nnajieze - AI Automation Specialist, Cloud Engineer, Software Engineer">
         <meta name="twitter:creator" content="@snnajieze">
         <meta name="twitter:site" content="@snnajieze">
         
@@ -38,7 +38,7 @@
         <meta name="theme-color" content="#2563eb">
         <meta name="color-scheme" content="light dark">
 
-        <title>Solomon Nnajieze | Software & DevOps Engineer</title>
+        <title>Solomon Nnajieze | AI Automation Specialist, Cloud Engineer, Software Engineer</title>
 
         <link rel="icon" href="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}">
         <!-- Fonts -->
@@ -252,7 +252,7 @@
                         <img src="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}" alt="Solomon Nnajieze" class="w-full h-full object-cover">
                     </div>
                 </div>
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Software & DevOps Engineer</h1>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">AI Automation Specialist, Cloud Engineer, Software Engineer</h1>
                 <p class="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 mb-8 max-w-2xl mx-auto leading-relaxed">
                     Building reliable, scalable systems with Laravel, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams ship faster.
                 </p>
@@ -281,18 +281,9 @@
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl font-bold mb-12">Skills & Expertise</h2>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
-                        <h3 class="text-xl font-bold mb-6 text-blue-600 dark:text-blue-400">Backend & Web Development</h3>
-                        <ul class="space-y-3 text-zinc-700 dark:text-zinc-300">
-                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> PHP 8+ & Laravel (latest stable)</li>
-                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> REST APIs & API Design</li>
-                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> MySQL, PostgreSQL</li>
-                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Blade Templates & Livewire</li>
-                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Tailwind CSS & Frontend Tooling</li>
-                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Git & Version Control</li>
-                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Performance Optimization</li>
-                        </ul>
-                    </div>
+
+                    
+
                     <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
                         <h3 class="text-xl font-bold mb-6 text-blue-600 dark:text-blue-400">DevOps & Cloud Infrastructure</h3>
                         <ul class="space-y-3 text-zinc-700 dark:text-zinc-300">
@@ -305,6 +296,20 @@
                             <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Infrastructure as Code</li>
                         </ul>
                     </div>
+
+                    <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-xl font-bold mb-6 text-blue-600 dark:text-blue-400">Backend & Web Development</h3>
+                        <ul class="space-y-3 text-zinc-700 dark:text-zinc-300">
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> PHP 8+ & Laravel (latest stable)</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> REST APIs & API Design</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> MySQL, PostgreSQL</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Blade Templates & Livewire</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Tailwind CSS & Frontend Tooling</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Git & Version Control</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Performance Optimization</li>
+                        </ul>
+                    </div>
+                    
                     <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
                         <h3 class="text-xl font-bold mb-6 text-blue-600 dark:text-blue-400">Professional Practices</h3>
                         <ul class="space-y-3 text-zinc-700 dark:text-zinc-300">
@@ -525,7 +530,7 @@
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.627l-5.1-6.694-5.867 6.694h-3.306l7.73-8.835L2.577 2.25h6.79l4.605 6.09L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"></path></svg>
                             X
                         </a>
-                        <a href="https://wa.me/2348108938172" target="_blank" class="flex items-center justify-center gap-3 px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <!-- <a href="https://wa.me/2348108938172" target="_blank" class="flex items-center justify-center gap-3 px-6 py-3 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
                             <svg
                                 class="w-5 h-5"
                                 fill="currentColor"
@@ -538,7 +543,7 @@
                                 </svg>
 
                             WhatsApp
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>
