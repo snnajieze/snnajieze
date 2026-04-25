@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Basic Meta Tags -->
-        <meta name="description" content="AI Automation Specialist, Cloud Engineer, Software Engineer. 7+ years building reliable, scalable systems with Laravel, AWS, and cloud infrastructure. Open to remote roles.">
+        <meta name="description" content="AI Automation Specialist, Cloud Engineer, Software Engineer. Building reliable, scalable systems with AI automation, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams move faster and operate smarter.">
         <meta name="author" content="Solomon Nnajieze">
         <meta name="keywords" content="AI Automation, Laravel, DevOps, Full Stack Developer, PHP, AWS, Cloud Infrastructure, CI/CD, Backend Engineer, Nigeria">
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -15,7 +15,7 @@
         <!-- Open Graph Tags for Social Media Preview -->
         <meta property="og:type" content="website">
         <meta property="og:title" content="Solomon Nnajieze | AI Automation Specialist, Cloud Engineer, Software Engineer">
-        <meta property="og:description" content="AI Automation Specialist, Cloud Engineer, Software Engineer. 7+ years building reliable, scalable systems with Laravel, AWS, and cloud infrastructure.">
+        <meta property="og:description" content="AI Automation Specialist, Cloud Engineer, Software Engineer. Building reliable, scalable systems with AI automation, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams move faster and operate smarter.">
         <meta property="og:image" content="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
@@ -27,7 +27,7 @@
         <!-- Twitter Card Tags -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Solomon Nnajieze | AI Automation Specialist, Cloud Engineer, Software Engineer">
-        <meta name="twitter:description" content="AI Automation Specialist, Cloud Engineer, Software Engineer. 7+ years building reliable, scalable systems with Laravel, AWS, and cloud infrastructure.">
+        <meta name="twitter:description" content="AI Automation Specialist, Cloud Engineer, Software Engineer. Building reliable, scalable systems with AI automation, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams move faster and operate smarter.">
         <meta name="twitter:image" content="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}">
         <meta name="twitter:image:alt" content="Solomon Nnajieze - AI Automation Specialist, Cloud Engineer, Software Engineer">
         <meta name="twitter:creator" content="@snnajieze">
@@ -254,7 +254,7 @@
                 </div>
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">AI Automation Specialist, Cloud Engineer, Software Engineer</h1>
                 <p class="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-                    Building reliable, scalable systems with Laravel, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams ship faster.
+                    Building reliable, scalable systems with AI automation, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams move faster and operate smarter.
                 </p>
                 <div class="flex flex-col md:flex-row gap-4 justify-center">
                     <a href="#projects" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors inline-block">View Projects</a>
@@ -268,10 +268,15 @@
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl font-bold mb-12">About Me</h2>
                 <div class="space-y-6 text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed">
-                    <p>I'm a Software Engineer who evolved into DevOps and Platform Engineering. Starting with PHP and Laravel, I've spent the last 7 years building, deploying, and scaling web applications in production environments.</p>
-                    <p>My journey took me from pure backend development to owning systems end-to-end—application code, infrastructure, CI/CD pipelines, and operational reliability. I've worked with teams at SAMBA-DATA R&D, SwitchCoins Global, BFA Digital Tech, and various startups, handling everything from architecting REST APIs to managing cloud deployments on AWS and DigitalOcean.</p>
-                    <p>What drives me: reducing operational friction, automating repetitive tasks, writing clear documentation, and helping teams move faster with confidence. I believe great engineering is invisible—it just works.</p>
-                    <p>When I'm not coding, I'm writing technical guides, mentoring junior developers, or exploring new infrastructure tooling. I'm open to remote-first roles with teams focused on reliability, automation, and real-world impact.</p>
+                    <p>I'm a Software Engineer specializing in <strong>AI Automation, Cloud Engineering, and DevOps</strong>, with 7+ years of experience building, deploying, and scaling production-grade systems. My background in PHP/Laravel evolved into full ownership of cloud infrastructure, automation workflows, and system reliability.</p>
+
+                    <p>I design and operate scalable systems using <strong>AWS, DigitalOcean, Docker, CI/CD (GitHub Actions), Linux, and Nginx</strong>. I build <strong>automation workflows (n8n, APIs, AI-assisted processes)</strong> that eliminate repetitive tasks, improve operational efficiency, and reduce infrastructure costs for businesses.</p>
+
+                    <p>My experience spans backend engineering, cloud deployments, and production reliability across teams at <strong>SAMBA-DATA R&D, SwitchCoins Global, BFA Digital Tech</strong>, and multiple startups. I’ve built REST APIs, optimized databases, automated deployments, and maintained high-availability systems used in real-world environments.</p>
+
+                    <p>I focus on <strong>automation, scalability, security, and cost optimization</strong>—helping teams ship faster while keeping systems stable and predictable. I also contribute as a technical writer, documenting CI/CD, cloud workflows, and practical engineering solutions.</p>
+
+                    <p>Currently, I’m deepening my expertise in <strong>AI-driven automation, cloud-native systems, and platform engineering</strong>, and I’m open to remote opportunities where I can help build efficient, intelligent, and high-impact systems.</p>
                 </div>
             </div>
         </section>
@@ -294,6 +299,21 @@
                             <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Linux (Nginx, Apache, systemd)</li>
                             <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Monitoring & Observability</li>
                             <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Infrastructure as Code</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-xl font-bold mb-6 text-blue-600 dark:text-blue-400">AI Automation</h3>
+                        <ul class="space-y-3 text-zinc-700 dark:text-zinc-300">
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> n8n - Open-source workflow automation</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Zapier - No-code automation platform</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Make - Advanced visual automation</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> ChatGPT API - AI language model integration</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Claude API - Conversational AI assistant</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Airtable - Hybrid database-spreadsheet</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> Voiceflow - Conversational AI design</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> ManyChat - Marketing chatbot platform</li>
+                            <li class="flex items-center"><span class="text-blue-600 mr-3">▸</span> LangChain - AI framework for LLMs</li>
                         </ul>
                     </div>
 
@@ -341,6 +361,23 @@
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl font-bold mb-12">Featured Projects</h2>
                 <div class="space-y-8">
+                    <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
+                        <h3 class="text-2xl font-bold mb-3">Custom AI Customer Service and Sales Assistant</h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 mb-4">AI-powered lead capture automation for businesses</p>
+                        <div class="space-y-3 mb-4 text-zinc-700 dark:text-zinc-300">
+                            <p><strong>Problem:</strong> Your sales team is probably spending hours manually answering customer questions, qualifying leads, updating spreadsheets, and following up with prospects. This takes time away from actually closing deals.</p>
+                            <p><strong>Solution:</strong> AI-Powered Chat Agent that engages with prospective customers 24/7, Intelligent Lead Qualification – automatically captures Query details, Appointment Status, and Customer Type through natural conversation, Instant Google Sheets Integration – every qualified lead is automatically logged with all relevant details, Smart Memory – remembers conversation context to provide personalized responses, Automatic Meeting Scheduling – every qualified lead is automatically scheduled for a meeting.</p>
+                            <p><strong>Impact:</strong> Your team saves hours of manual data entry, never misses a lead, and can focus on high-value conversations while the AI handles initial qualification.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">AI Automation</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">Chat Agent</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">Lead Qualification</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">Google Sheets</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">Meeting Scheduling</span>
+                        </div>
+                    </div>
+
                     <div class="p-8 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-blue-600 dark:hover:border-blue-400 transition-colors">
                         <h3 class="text-2xl font-bold mb-3"><a href="https://c4csignals.com" target="_blank" class="hover:text-blue-600 dark:hover:text-blue-400">c4csignals.com</a></h3>
                         <p class="text-zinc-600 dark:text-zinc-400 mb-4">Personally built trading signals platform</p>
@@ -494,7 +531,7 @@
                 </div>
                 <div class="p-8 bg-white dark:bg-zinc-800 rounded-lg border border-blue-600 dark:border-blue-400">
                     <p class="text-zinc-700 dark:text-zinc-300 mb-4">
-                        Writing on  <a href="https://medium.com/@snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Medium</a>, <a href="https://hashnode.com/@snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Hashnode</a>, and <a href="https://dev.to/snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Dev.to</a> — follow me for weekly posts on AI, DevOps, Laravel, and cloud infrastructure.
+                        Writing on  <a href="https://medium.com/@snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Medium</a>, <a href="https://hashnode.com/@snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Hashnode</a>, and <a href="https://dev.to/snnajieze" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">Dev.to</a> — follow me for weekly posts on AI, Automation, DevOps, Laravel, and cloud infrastructure.
                     </p>
                 </div>
             </div>
