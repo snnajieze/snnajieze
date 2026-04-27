@@ -9,6 +9,7 @@ This repository contains the source code for my **personal portfolio website**, 
 ## 🚀 About the Portfolio
 
 This portfolio is designed to:
+
 - Highlight my **projects**, **skills**, and **experience**
 - Demonstrate clean architecture and modern development practices
 - Serve as a living project that evolves as I grow technically
@@ -20,11 +21,13 @@ The focus is on **performance**, **maintainability**, and **developer experience
 ## 🛠️ Tech Stack
 
 ### Core
+
 - **Laravel** – Backend framework and application architecture  
 - **Livewire** – Reactive components without leaving Laravel  
 - **Tailwind CSS** – Utility-first styling for rapid, consistent UI development  
 
 ### Optional / Future Enhancements
+
 - **Vue.js** – For richer frontend interactivity where needed  
 - **Alpine.js** – Lightweight JavaScript interactions  
 - **REST / APIs** – For extensibility and integrations  
@@ -34,6 +37,7 @@ The focus is on **performance**, **maintainability**, and **developer experience
 ## ⚙️ DevOps & Engineering Practices
 
 As a DevOps-minded engineer, this project also reflects my approach to:
+
 - **CI/CD pipelines**
 - **Containerization (Docker)**
 - **Cloud deployment**
@@ -55,6 +59,7 @@ As a DevOps-minded engineer, this project also reflects my approach to:
 ## 🌱 Continuous Growth
 
 This portfolio is not static. It’s a reflection of:
+
 - Ongoing learning  
 - Experimentation with new tools  
 - Improvements in design, performance, and architecture  
@@ -66,21 +71,19 @@ I believe in **continuous improvement** — both in code and in career.
 ## 🤝 Let’s Connect
 
 I’m always open to:
+
 - Collaboration  
 - Technical discussions  
 - Open-source contributions  
 - New opportunities  
-- Remote collaboration 
+- Remote collaboration
 
 You can find me across my social platforms or reach out directly through my portfolio:
 
-- **X (Twitter)** — https://x.com/snnajieze  
-- **LinkedIn** — https://linkedin.com/in/snnajieze  
-- **GitHub** — https://github.com/snnajieze  
-- **Medium** — https://medium.com/@snnajieze  
-- **Instagram** — https://instagram.com/snnajieze  
-- **TikTok** — https://tiktok.com/@snnajieze  
-- **Threads** — https://www.threads.net/@snnajieze  
+- **X (Twitter)** — <https://x.com/snnajieze>  
+- **LinkedIn** — <https://linkedin.com/in/snnajieze>  
+- **GitHub** — <https://github.com/snnajieze>  
+- **Medium** — <https://medium.com/@snnajieze>
 
 ---
 
