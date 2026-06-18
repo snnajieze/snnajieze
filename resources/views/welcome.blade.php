@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Basic Meta Tags -->
-        <meta name="description" content="AI Automation Specialist, Cloud Engineer, Software Engineer. Building reliable, scalable systems with AI automation, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams move faster and operate smarter.">
+        <meta name="description" content="Cloud Engineer & AI Automation Specialist. Building reliable, scalable systems with AI automation, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams move faster and operate smarter.">
         <meta name="author" content="Solomon Nnajieze">
         <meta name="keywords" content="AI Automation, Laravel, DevOps, Full Stack Developer, PHP, AWS, Cloud Infrastructure, CI/CD, Backend Engineer, Nigeria">
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -14,22 +14,22 @@
         
         <!-- Open Graph Tags for Social Media Preview -->
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Solomon Nnajieze | AI Automation Specialist, Cloud Engineer, Software Engineer">
-        <meta property="og:description" content="AI Automation Specialist, Cloud Engineer, Software Engineer. Building reliable, scalable systems with AI automation, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams move faster and operate smarter.">
+        <meta property="og:title" content="Solomon Nnajieze | Cloud Engineer & AI Automation Specialist">
+        <meta property="og:description" content="Cloud Engineer & AI Automation Specialist. Building reliable, scalable systems with AI automation, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams move faster and operate smarter.">
         <meta property="og:image" content="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="630">
-        <meta property="og:image:alt" content="Solomon Nnajieze - AI Automation Specialist, Cloud Engineer, Software Engineer">
+        <meta property="og:image:alt" content="Solomon Nnajieze - Cloud Engineer & AI Automation Specialist">
         <meta property="og:url" content="{{ config('app.url') }}">
         <meta property="og:site_name" content="Solomon Nnajieze">
         <meta property="og:locale" content="en_US">
         
         <!-- Twitter Card Tags -->
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Solomon Nnajieze | AI Automation Specialist, Cloud Engineer, Software Engineer">
-        <meta name="twitter:description" content="AI Automation Specialist, Cloud Engineer, Software Engineer. Building reliable, scalable systems with AI automation, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams move faster and operate smarter.">
+        <meta name="twitter:title" content="Solomon Nnajieze | Cloud Engineer & AI Automation Specialist">
+        <meta name="twitter:description" content="Cloud Engineer & AI Automation Specialist. Building reliable, scalable systems with AI automation, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams move faster and operate smarter.">
         <meta name="twitter:image" content="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}">
-        <meta name="twitter:image:alt" content="Solomon Nnajieze - AI Automation Specialist, Cloud Engineer, Software Engineer">
+        <meta name="twitter:image:alt" content="Solomon Nnajieze - Cloud Engineer & AI Automation Specialist">
         <meta name="twitter:creator" content="@snnajieze">
         <meta name="twitter:site" content="@snnajieze">
         
@@ -38,7 +38,7 @@
         <meta name="theme-color" content="#2563eb">
         <meta name="color-scheme" content="light dark">
 
-        <title>Solomon Nnajieze | AI Automation Specialist, Cloud Engineer, Software Engineer</title>
+        <title>Solomon Nnajieze | Cloud Engineer & AI Automation Specialist</title>
 
         <link rel="icon" href="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}">
         <!-- Fonts -->
@@ -252,7 +252,7 @@
                         <img src="{{ asset('images/solomon-nnajieze-profile-pix.jpg') }}" alt="Solomon Nnajieze" class="w-full h-full object-cover">
                     </div>
                 </div>
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">AI Automation Specialist, Cloud Engineer, Software Engineer</h1>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">Cloud Engineer & AI Automation Specialist</h1>
                 <p class="text-xl md:text-2xl text-zinc-600 dark:text-zinc-400 mb-8 max-w-2xl mx-auto leading-relaxed">
                     Building reliable, scalable systems with AI automation, cloud infrastructure, and DevOps best practices. 7+ years of experience helping teams move faster and operate smarter.
                 </p>
@@ -268,7 +268,7 @@
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl font-bold mb-12">About Me</h2>
                 <div class="space-y-6 text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed">
-                    <p>I'm a Software Engineer specializing in <strong>AI Automation, Cloud Engineering, and DevOps</strong>, with 7+ years of experience building, deploying, and scaling production-grade systems. My background in PHP/Laravel evolved into full ownership of cloud infrastructure, automation workflows, and system reliability.</p>
+                    <p>I'm a Software Engineer specializing in <strong>Cloud Engineering, DevOps, and AI Automation</strong>, with 7+ years of experience building, deploying, and scaling production-grade systems. My background in PHP/Laravel evolved into full ownership of cloud infrastructure, automation workflows, and system reliability.</p>
 
                     <p>I design and operate scalable systems using <strong>AWS, DigitalOcean, Docker, CI/CD (GitHub Actions), Linux, and Nginx</strong>. I build <strong>automation workflows (n8n, APIs, AI-assisted processes)</strong> that eliminate repetitive tasks, improve operational efficiency, and reduce infrastructure costs for businesses.</p>
 
@@ -276,7 +276,7 @@
 
                     <p>I focus on <strong>automation, scalability, security, and cost optimization</strong>—helping teams ship faster while keeping systems stable and predictable. I also contribute as a technical writer, documenting CI/CD, cloud workflows, and practical engineering solutions.</p>
 
-                    <p>Currently, I’m deepening my expertise in <strong>AI-driven automation, cloud-native systems, and platform engineering</strong>, and I’m open to remote opportunities where I can help build efficient, intelligent, and high-impact systems.</p>
+                    <p>Currently, I’m deepening my expertise in <strong>AI-driven automation, cloud-native systems, and platform engineering</strong>, and I’m open to remote opportunities where I can help build efficient, intelligent, and high-impactful systems.</p>
                 </div>
             </div>
         </section>
@@ -645,7 +645,7 @@
         </script>
 
 
-<elevenlabs-convai agent-id="agent_4101ktz98gbjf4y832dak4k3hd5v"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+<elevenlabs-convai agent-id="agent_0901kvdp5g6xfs2awvna14cxnfns"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 
     </body>
 </html>
