@@ -268,7 +268,7 @@
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-4xl font-bold mb-12">About Me</h2>
                 <div class="space-y-6 text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed">
-                    <p>I'm a Software Engineer specializing in <strong>Cloud Engineering, DevOps, and AI Automation</strong>, with 7+ years of experience building, deploying, and scaling production-grade systems. My background in PHP/Laravel evolved into full ownership of cloud infrastructure, automation workflows, and system reliability.</p>
+                    <p>I'm a <strong>Cloud Engineer and AI Automation Specialist</strong>, with 7+ years of experience building, deploying, and scaling production-grade systems. My background in software engineering evolved into full ownership of cloud infrastructure, automation workflows, and system reliability.</p>
 
                     <p>I design and operate scalable systems using <strong>AWS, DigitalOcean, Docker, CI/CD (GitHub Actions), Linux, and Nginx</strong>. I build <strong>automation workflows (n8n, APIs, AI-assisted processes)</strong> that eliminate repetitive tasks, improve operational efficiency, and reduce infrastructure costs for businesses.</p>
 
